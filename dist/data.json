@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-18T15:13:25+00:00",
+  "generated_at": "2026-11-18T15:34:31+00:00",
   "site": {
     "name": "法域前沿",
     "english_name": "Lexpacis",
@@ -9493,18 +9493,18 @@
         "topics": []
       }
     ],
-    "updated_at": "2026-11-18T15:13:25+00:00",
+    "updated_at": "2026-11-18T15:34:31+00:00",
     "coverage_note": "人工建立的期刊入口目录 + 程序定期检查 + 已接通信源中的征稿线索。目录不是排名，不等于已覆盖各刊全部征稿；主页可读也不等于当前正在收稿。"
   },
   "operations": {
     "last_run": {
       "id": 1,
-      "started_at": "2026-11-18T15:13:22+00:00",
-      "finished_at": "2026-11-18T15:13:25+00:00",
-      "successes": 2,
+      "started_at": "2026-11-18T15:34:31+00:00",
+      "finished_at": "2026-11-18T15:34:31+00:00",
+      "successes": 0,
       "failures": 0,
-      "added": 11,
-      "changed": 6
+      "added": 0,
+      "changed": 0
     },
     "scheduler_enabled": true,
     "scheduled_run_verified": false,
@@ -9517,7 +9517,7 @@
       "added": 11,
       "changed": 6
     },
-    "scheduler_note": "最近一次云端运行：2026-11-18T15:13:25+00:00；触发方式：push。信源成功时间单独显示。",
+    "scheduler_note": "最近一次云端运行：2026-11-18T15:34:31+00:00；触发方式：push。信源成功时间单独显示。",
     "total_archived": 234,
     "visible_in_export": 234
   }
