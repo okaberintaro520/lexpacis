@@ -1,0 +1,20 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"CFP extraction from approved source pages",
+  "type":"object","additionalProperties":false,"required":["model","calls"],
+  "properties":{"model":{"type":"string","maxLength":100},"calls":{"type":"array","maxItems":12,"items":{
+    "type":"object","additionalProperties":false,
+    "required":["id","title","original_title","kind","journal_id","language","url","description","deadline","deadline_text","deadline_label","deadline_timezone","event_date","topics","page_id","content_hash","evidence_quote"],
+    "properties":{
+      "id":{"type":"string","pattern":"^cfp-[a-z0-9-]{3,100}$"},
+      "title":{"type":"string","maxLength":1000},"original_title":{"type":"string","maxLength":1000},
+      "kind":{"enum":["journal_special","journal_notice","conference"]},"journal_id":{"type":["string","null"]},
+      "language":{"enum":["zh","en","bilingual"]},"url":{"type":"string"},
+      "description":{"type":"string","maxLength":1000},"deadline":{"type":["string","null"]},
+      "deadline_text":{"type":["string","null"]},"deadline_label":{"type":"string","maxLength":1000},
+      "deadline_timezone":{"type":["string","null"]},"event_date":{"type":"null"},
+      "topics":{"type":"array","items":{"enum":["disputes","ocean-climate","economic","rights","institutions","theory"]}},
+      "page_id":{"type":"string"},"content_hash":{"type":"string"},"evidence_quote":{"type":"string","minLength":10}
+    }
+  }}}
+}

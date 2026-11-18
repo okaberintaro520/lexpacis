@@ -1,0 +1,68 @@
+[
+  {
+    "file": "vendor/citeproc.js",
+    "url": "https://github.com/Juris-M/citeproc-js/blob/56e7ef310154748368665cc8a2be124e3c141832/citeproc.js",
+    "license": "CPAL-1.0 OR AGPL-3.0-or-later",
+    "sha256": "8d80b2d4ad5d249178ddfa4c535bb72bbd1883521a88e9362686558e2f82029d"
+  },
+  {
+    "file": "vendor/citeproc-LICENSE.txt",
+    "url": "https://github.com/Juris-M/citeproc-js/blob/56e7ef310154748368665cc8a2be124e3c141832/LICENSE",
+    "license": "CPAL-1.0 OR AGPL-3.0-or-later",
+    "sha256": "b96ca8e1716f93449b480083c7510c18d129fa9afa4644d62c6347c06177ce30"
+  },
+  {
+    "file": "vendor/citeproc-CPAL.txt",
+    "url": "https://github.com/Juris-M/citeproc-js/blob/56e7ef310154748368665cc8a2be124e3c141832/CPAL",
+    "license": "CPAL-1.0 OR AGPL-3.0-or-later",
+    "sha256": "a953615139d8c767eb5e95f14215bf5c356ea23397a15137f6e119babf3fe69b"
+  },
+  {
+    "file": "vendor/oscola.csl",
+    "url": "https://github.com/citation-style-language/styles/blob/05313ce3dd6ff91ced8a1ce1dfaa708c65c65ec4/oscola.csl",
+    "license": "CC-BY-SA-3.0",
+    "sha256": "b51ea5728f78c460746174d1a3944383d8bb6027b606e0c651f14b3af521c923"
+  },
+  {
+    "file": "vendor/bluebook.csl",
+    "url": "https://github.com/citation-style-language/styles/blob/05313ce3dd6ff91ced8a1ce1dfaa708c65c65ec4/bluebook-law-review.csl",
+    "license": "CC-BY-SA-3.0",
+    "sha256": "9f842bac2287e12066140d26d940a69cd2cbd2367d27bff350fedab8f2419336"
+  },
+  {
+    "file": "vendor/chicago.csl",
+    "url": "https://github.com/citation-style-language/styles/blob/05313ce3dd6ff91ced8a1ce1dfaa708c65c65ec4/chicago-notes-bibliography.csl",
+    "license": "CC-BY-SA-3.0",
+    "sha256": "4b6be4bceaf8f3c31b49331c9f9e38c977f666d6ab80e19a2ac8482c7511abeb"
+  },
+  {
+    "file": "vendor/chinese-law.csl",
+    "url": "https://github.com/zotero-chinese/styles/blob/cf56b119812c83c91c99606405d7e7861685c3b7/src/%E6%B3%95%E5%AD%A6%E5%BC%95%E6%B3%A8%E6%89%8B%E5%86%8C%EF%BC%88%E7%AC%AC%E4%BA%8C%E7%89%88%EF%BC%8C%E5%A4%9A%E8%AF%AD%E8%A8%80%EF%BC%8C%E9%87%8D%E5%A4%8D%E5%BC%95%E7%94%A8%E4%B8%8D%E7%9C%81%E7%95%A5%EF%BC%8C%E6%A0%87%E6%B3%A8%E9%A1%B5%E7%A0%81%EF%BC%89/%E6%B3%95%E5%AD%A6%E5%BC%95%E6%B3%A8%E6%89%8B%E5%86%8C%EF%BC%88%E7%AC%AC%E4%BA%8C%E7%89%88%EF%BC%8C%E5%A4%9A%E8%AF%AD%E8%A8%80%EF%BC%8C%E9%87%8D%E5%A4%8D%E5%BC%95%E7%94%A8%E4%B8%8D%E7%9C%81%E7%95%A5%EF%BC%8C%E6%A0%87%E6%B3%A8%E9%A1%B5%E7%A0%81%EF%BC%89.csl",
+    "license": "CC-BY-SA-3.0",
+    "sha256": "b4c99852b99ffdf8644a8d5d5d72da4bdf3ed8757723989705c31cc800a431e5"
+  },
+  {
+    "file": "vendor/zotero-chinese-LICENSE.txt",
+    "url": "https://github.com/zotero-chinese/styles/blob/cf56b119812c83c91c99606405d7e7861685c3b7/LICENSE",
+    "license": "See file",
+    "sha256": "1f7a10a45bbf397288a50849f67341a6fcde698a2c66f1938ef4a320f0c32e6f"
+  },
+  {
+    "file": "vendor/locales-en-US.xml",
+    "url": "https://github.com/citation-style-language/locales/blob/21a175a1d84cc1792dd73f5a627de004fba5b207/locales-en-US.xml",
+    "license": "CC-BY-SA-3.0",
+    "sha256": "ac864c7c21166b4390d82c31792cdc509400727fa0060b43d8aa17e07f9cb079"
+  },
+  {
+    "file": "vendor/locales-en-GB.xml",
+    "url": "https://github.com/citation-style-language/locales/blob/21a175a1d84cc1792dd73f5a627de004fba5b207/locales-en-GB.xml",
+    "license": "CC-BY-SA-3.0",
+    "sha256": "e4a1fed9cec04b5fed5e9027b4055925cd4d8f7c9fe233eb0ceca6d4be3999f6"
+  },
+  {
+    "file": "vendor/locales-zh-CN.xml",
+    "url": "https://github.com/citation-style-language/locales/blob/21a175a1d84cc1792dd73f5a627de004fba5b207/locales-zh-CN.xml",
+    "license": "CC-BY-SA-3.0",
+    "sha256": "95cebc667f2da8fb5b9864e49941e3f867d59f79feba929bc58e8ed6bfd4d582"
+  }
+]

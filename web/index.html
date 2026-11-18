@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#243b43">
+  <meta name="description" content="{{DESCRIPTION}}">
+  <title>{{SITE_NAME}} {{ENGLISH_NAME}} · 国际法学术观察</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate" type="application/rss+xml" title="{{SITE_NAME}} RSS" href="feed.xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="tools.css">
+  <script src="data.js" defer></script>
+  <script src="vendor/citeproc.js" defer></script>
+  <script src="vendor/citation-styles.js" defer></script>
+  <script src="citations.js" defer></script>
+  <script src="cfp.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要内容</a>
+  <div id="app">
+    <header class="topbar">
+      <a class="brand" href="#/latest" aria-label="{{SITE_NAME}}首页"><span class="brand-mark">{{BRAND_MARK}}<span>↗</span></span><span>{{SITE_NAME}}<small>{{ENGLISH_NAME}}</small></span></a>
+      <div class="topbar-caption">THE INTERNATIONAL LAW OBSERVATORY</div>
+      <div class="topbar-actions"><a href="feed.xml" class="quiet-link" title="订阅 RSS"><span aria-hidden="true">◔</span> RSS 订阅</a><button class="icon-button mobile-search" id="mobile-search" aria-label="搜索">⌕</button><a class="topbar-saved" href="#/saved" title="我的收藏">我的收藏 <span id="saved-count">0</span></a></div>
+    </header>
+    <div class="workspace">
+      <aside class="sidebar" aria-label="主要导航">
+        <div class="sidebar-label">探索 / EXPLORE</div>
+        <nav id="main-nav">
+          <a href="#/latest" data-route="latest"><span class="nav-icon">◫</span>最新资讯<span class="nav-count" id="nav-total"></span></a>
+          <a href="#/research" data-route="research"><span class="nav-icon">▤</span>研究文献</a>
+          <a href="#/events" data-route="events"><span class="nav-icon">▦</span>学术活动</a>
+          <a href="#/cfp" data-route="cfp"><span class="nav-icon">↗</span>CFP 征稿</a>
+          <a href="#/cite" data-route="cite"><span class="nav-icon">❞</span>引注转换</a>
+          <a href="#/official" data-route="official"><span class="nav-icon">▥</span>官方资料</a>
+          <a href="#/cases" data-route="cases"><span class="nav-icon">⚖</span>案件进展</a>
+          <a href="#/commentary" data-route="commentary"><span class="nav-icon">✎</span>学术评论</a>
+          <a href="#/news" data-route="news"><span class="nav-icon">◎</span>国际动态</a>
+        </nav>
+        <div class="sidebar-label topic-label">专题 / TOPICS</div>
+        <nav id="topic-nav" class="topic-nav"></nav>
+        <div class="sidebar-bottom"><a href="#/sources" data-route="sources">信源目录 <span>↗</span></a><a href="#/about" data-route="about">关于与更新状态 <span>↗</span></a><div class="sidebar-note"><span class="status-dot"></span>公开信源 · 可追溯索引<small>以原始资料为研究起点</small></div></div>
+      </aside>
+      <main id="main" tabindex="-1">
+        <div class="edition-line"><span>INTERNATIONAL LAW, IN CONTEXT.</span><span id="edition-date"></span></div>
+        <div id="page-content" aria-live="polite"><div class="loading-state">正在打开研究工作台…</div></div>
+        <footer class="site-footer"><div><strong>{{SITE_NAME}} <span>{{ENGLISH_NAME}}</span></strong><p>{{TAGLINE}}</p></div><div><a href="#/about">收录与整理说明</a><a href="#/sources">信源与覆盖范围</a><a href="calendar.ics">学术日历 ICS</a><span id="footer-updated"></span></div></footer>
+      </main>
+    </div>
+  </div>
+  <dialog id="detail-dialog" aria-labelledby="detail-title"><div id="detail-content"></div><button class="dialog-close icon-button" id="close-dialog" aria-label="关闭详情">×</button></dialog>
+  <div id="toast" role="status" class="toast" hidden></div>
+  <noscript><div class="noscript">此工作台的搜索与筛选需要 JavaScript。你也可以阅读 <a href="feed.xml">RSS 资讯索引</a>，或下载 <a href="data.json">完整公开数据</a>。</div></noscript>
+</body>
+</html>

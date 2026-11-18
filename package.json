@@ -1,0 +1,14 @@
+{
+  "name":"lexatlas",
+  "version":"1.1.1",
+  "private":true,
+  "description":"Portable, model-independent international law observatory",
+  "scripts":{
+    "build":"python scripts/pipeline.py build",
+    "update":"python scripts/pipeline.py update",
+    "prepare":"python scripts/pipeline.py prepare",
+    "test":"python -m unittest discover -s tests -v",
+    "preview":"python scripts/pipeline.py serve",
+    "doctor":"python scripts/pipeline.py doctor"
+  }
+}

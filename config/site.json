@@ -1,0 +1,164 @@
+{
+  "name": "法域前沿",
+  "english_name": "LexAtlas",
+  "tagline": "追踪国际法，连接研究的下一步。",
+  "description": "面向高校师生与研究者的国际法学术资讯与原始资料索引。",
+  "base_url": "https://lexatlas-law-observatory.dependablebench4.chatgpt.site",
+  "timezone": "Asia/Shanghai",
+  "ai_batch_size": 12,
+  "ai_daily_limit": 24,
+  "max_entries_per_source": 30,
+  "max_public_items": 5000,
+  "fetch_timeout_seconds": 20,
+  "max_fetch_bytes": 6000000,
+  "user_agent": "LexAtlas/1.0 (academic metadata reader; low-frequency polling)",
+  "deploy": {
+    "provider": "none",
+    "cloudflare_project": "",
+    "github_repository": "",
+    "github_branch": "gh-pages"
+  },
+  "topics": [
+    {
+      "id": "disputes",
+      "name": "争端解决与国家责任",
+      "short": "争端解决",
+      "keywords": [
+        "arbitrat",
+        "jurisdiction",
+        "dispute",
+        "state responsibility",
+        "immunit",
+        "icj",
+        "itlos",
+        "国际法院",
+        "仲裁",
+        "国家责任",
+        "管辖",
+        "豁免"
+      ]
+    },
+    {
+      "id": "ocean-climate",
+      "name": "海洋、环境与气候",
+      "short": "海洋与环境",
+      "keywords": [
+        "ocean",
+        "sea law",
+        "law of the sea",
+        "maritime",
+        "climate",
+        "environment",
+        "biodiversity",
+        "beyond national jurisdiction",
+        "b b n j",
+        "b b nj",
+        "海洋",
+        "气候",
+        "环境"
+      ]
+    },
+    {
+      "id": "economic",
+      "name": "国际经济法与投资",
+      "short": "经济与投资",
+      "keywords": [
+        "trade",
+        "investment",
+        "investor",
+        "wto",
+        "sanction",
+        "tariff",
+        "economic",
+        "commerce",
+        "贸易",
+        "投资",
+        "制裁"
+      ]
+    },
+    {
+      "id": "rights",
+      "name": "人权与国际刑法",
+      "short": "人权与刑法",
+      "keywords": [
+        "human rights",
+        "criminal",
+        "genocide",
+        "humanitarian",
+        "icc",
+        "war crime",
+        "refugee",
+        "人权",
+        "国际刑",
+        "种族灭绝",
+        "难民",
+        "人道"
+      ]
+    },
+    {
+      "id": "institutions",
+      "name": "国际组织与条约法",
+      "short": "组织与条约",
+      "keywords": [
+        "united nations",
+        "treaty",
+        "treaties",
+        "international organization",
+        "international organisation",
+        "security council",
+        "条约",
+        "联合国",
+        "国际组织"
+      ]
+    },
+    {
+      "id": "theory",
+      "name": "国际法理论与方法",
+      "short": "理论与方法",
+      "keywords": [
+        "theory",
+        "method",
+        "history",
+        "colonial",
+        "philosophy",
+        "customary",
+        "理论",
+        "方法",
+        "历史",
+        "习惯"
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": "research",
+      "name": "研究文献",
+      "en": "SCHOLARSHIP"
+    },
+    {
+      "id": "events",
+      "name": "学术活动",
+      "en": "ACADEMIC EVENTS"
+    },
+    {
+      "id": "official",
+      "name": "官方资料",
+      "en": "OFFICIAL MATERIALS"
+    },
+    {
+      "id": "cases",
+      "name": "案件进展",
+      "en": "CASES & PROCEEDINGS"
+    },
+    {
+      "id": "commentary",
+      "name": "学术评论",
+      "en": "COMMENTARY"
+    },
+    {
+      "id": "news",
+      "name": "国际动态",
+      "en": "WORLD & LAW"
+    }
+  ]
+}

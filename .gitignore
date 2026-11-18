@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+.qa/
+node_modules/
+runtime/
+.env
+.env.*
+!.env.example
+.wrangler/
+.sites-workflow/
+artifacts/
+dist.previous/
+.dist-stage-*/
+*.zip
+*.log

@@ -1,0 +1,5 @@
+{
+  "hidden_items": [],
+  "hidden_sources": [],
+  "note": "需撤下资料时填写条目 ID 或信源 ID，然后重新 build 和 publish。首页、详情、RSS、ICS、JSON 将同步排除；本地数据库保留以便追溯。"
+}
