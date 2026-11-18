@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-18T14:50:49+00:00",
+  "generated_at": "2026-11-18T15:13:25+00:00",
   "site": {
     "name": "法域前沿",
-    "english_name": "LexAtlas",
+    "english_name": "Lexpacis",
     "tagline": "追踪国际法，连接研究的下一步。",
     "description": "面向高校师生与研究者的国际法学术资讯与原始资料索引。",
     "base_url": "https://okaberintaro520.github.io/lexpacis",
@@ -75,6 +75,38 @@
   ],
   "items": [
     {
+      "id": "2332297da06bb64a86e2",
+      "source_id": "ejiltalk",
+      "title": "One Secretariat, Two Continents? On the Chile-Belgium Merged Bid for the BBNJ Secretariat",
+      "url": "https://www.ejiltalk.org/one-secretariat-two-continents-on-the-chile-belgium-merged-bid-for-the-bbnj-secretariat/",
+      "doi": "",
+      "module": "commentary",
+      "published_at": "2026-11-18T08:00:25+00:00",
+      "date_precision": "instant",
+      "discovered_at": "2026-11-18T15:13:25+00:00",
+      "updated_at": "2026-11-18T15:13:25+00:00",
+      "evidence_basis": "RSS 摘录",
+      "source_revision": "62c87a1ef7d8de11e5f473ccfe89d814e01a56b5e6027c2a2b4584409b8ad6a8",
+      "topics": [],
+      "authors": [
+        "Vito De Lucia"
+      ],
+      "bibliography": {},
+      "material_type": "学术平台文章",
+      "provenance": [
+        {
+          "source_id": "ejiltalk",
+          "url": "https://www.ejiltalk.org/one-secretariat-two-continents-on-the-chile-belgium-merged-bid-for-the-bbnj-secretariat/",
+          "seen_at": "2026-11-18T15:13:25+00:00"
+        }
+      ],
+      "title_zh": "",
+      "summary_zh": "",
+      "ai": null,
+      "event": null,
+      "deadline": null
+    },
+    {
       "id": "c5e484ce087251f94cad",
       "source_id": "pca",
       "title": "PCA Press Release – PCA Case No. 2026-35: Conciliation between the Kingdom of Cambodia and the Kingdom of Thailand",
@@ -86,6 +118,7 @@
       "discovered_at": "2026-11-18T14:46:53+00:00",
       "updated_at": "2026-11-18T14:46:53+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "c63cf83d3bd1e0eb00e4c44ad582034e79f217ec972af9d053d275612f5e39b1",
       "topics": [
         "disputes"
       ],
@@ -117,6 +150,7 @@
       "discovered_at": "2026-11-18T10:18:54+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "f5df193da52cefcf092e97836d78f184109a011dc46ce00d9bea409cae148153",
       "topics": [],
       "authors": [
         "Hadi Dadmehr"
@@ -148,6 +182,7 @@
       "discovered_at": "2026-11-18T10:18:54+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "a0984cbbe3227f074506988a0300a2af369bf2f6f3cf3de6bb84f468eda0b59a",
       "topics": [],
       "authors": [
         "Gregory Stanton"
@@ -168,6 +203,40 @@
       "deadline": null
     },
     {
+      "id": "1241a1a2e793d760fd7e",
+      "source_id": "ejiltalk",
+      "title": "Electing the Fourth ICC Prosecutor: Preliminary Observations on the Process",
+      "url": "https://www.ejiltalk.org/electing-the-fourth-icc-prosecutor-preliminary-observations-on-the-process/",
+      "doi": "",
+      "module": "commentary",
+      "published_at": "2026-11-17T08:00:15+00:00",
+      "date_precision": "instant",
+      "discovered_at": "2026-11-18T15:13:25+00:00",
+      "updated_at": "2026-11-18T15:13:25+00:00",
+      "evidence_basis": "RSS 摘录",
+      "source_revision": "f70836e0325040e8949c4665560f18307423306cc22e456d222b51637fbc2ab0",
+      "topics": [
+        "rights"
+      ],
+      "authors": [
+        "Ezequiel Jimenez Martinez"
+      ],
+      "bibliography": {},
+      "material_type": "学术平台文章",
+      "provenance": [
+        {
+          "source_id": "ejiltalk",
+          "url": "https://www.ejiltalk.org/electing-the-fourth-icc-prosecutor-preliminary-observations-on-the-process/",
+          "seen_at": "2026-11-18T15:13:25+00:00"
+        }
+      ],
+      "title_zh": "",
+      "summary_zh": "",
+      "ai": null,
+      "event": null,
+      "deadline": null
+    },
+    {
       "id": "0b16f1e1940bd7ba3d92",
       "source_id": "wto",
       "title": "New trade-restrictive measures surge but WTO members step up trade facilitation efforts",
@@ -179,6 +248,7 @@
       "discovered_at": "2026-11-18T10:16:03+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "bb6f9ab5e516000f43e6660bd879a6262c74e75c3951763a4c3c87836b31ab87",
       "topics": [
         "economic"
       ],
@@ -210,6 +280,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "b8f7767e03743e24a2e86518d02a29f82b687648328ab7b319395c10423f826d",
       "topics": [],
       "authors": [
         "Leonardo Borlini"
@@ -248,8 +319,9 @@
       "published_at": "2026-11-17",
       "date_precision": "day",
       "discovered_at": "2026-11-18T13:45:30+00:00",
-      "updated_at": "2026-11-18T13:45:30+00:00",
-      "evidence_basis": "官方新闻目录元数据（首次核对）",
+      "updated_at": "2026-11-18T15:13:23+00:00",
+      "evidence_basis": "官方新闻目录元数据",
+      "source_revision": "3680a3c6f2c044958eaa2a78d42eac38b51f16f846aa5ec4538bd052ce5a06a6",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -258,7 +330,7 @@
         {
           "source_id": "un-geneva-news",
           "url": "https://www.ungeneva.org/en/news-media/news/2026/11/124933/winter-rains-deepen-gaza-crisis-amid-restricted-access-and-aid-cuts",
-          "seen_at": "2026-11-18T14:50:49+00:00"
+          "seen_at": "2026-11-18T15:13:23+00:00"
         }
       ],
       "title_zh": "联合国新闻：冬季降雨加剧加沙危机，援助准入受限与削减持续",
@@ -266,7 +338,7 @@
       "ai": {
         "model": "Codex（首次新闻目录译名）",
         "processed_at": "2026-11-18T13:45:30+00:00",
-        "basis": "官方新闻目录元数据（首次核对）"
+        "basis": "官方新闻目录元数据"
       },
       "event": null,
       "deadline": null
@@ -281,8 +353,9 @@
       "published_at": "2026-11-17",
       "date_precision": "day",
       "discovered_at": "2026-11-18T13:45:30+00:00",
-      "updated_at": "2026-11-18T13:45:30+00:00",
-      "evidence_basis": "官方新闻目录元数据（首次核对）",
+      "updated_at": "2026-11-18T15:13:23+00:00",
+      "evidence_basis": "官方新闻目录元数据",
+      "source_revision": "d1ae91df217d4f9d0708136cc3fc24c36ba3011f5eee7034f16f3d2e19f88212",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -291,7 +364,7 @@
         {
           "source_id": "un-geneva-news",
           "url": "https://www.ungeneva.org/en/news-media/news/2026/11/124935/haiti-atrocious-abuses-continue-un-warns-anti-gang-operations-must",
-          "seen_at": "2026-11-18T14:50:49+00:00"
+          "seen_at": "2026-11-18T15:13:23+00:00"
         }
       ],
       "title_zh": "海地：联合国警告反帮派行动须优先保护平民",
@@ -299,8 +372,38 @@
       "ai": {
         "model": "Codex（首次新闻目录译名）",
         "processed_at": "2026-11-18T13:45:30+00:00",
-        "basis": "官方新闻目录元数据（首次核对）"
+        "basis": "官方新闻目录元数据"
       },
+      "event": null,
+      "deadline": null
+    },
+    {
+      "id": "ab73fdd83d80bc032487",
+      "source_id": "un-geneva-news",
+      "title": "‘Hunger should not be a concern’: WFP steps in for families in Kenya who fled Ethiopia violence",
+      "url": "https://www.ungeneva.org/en/news-media/news/2026/11/124932/hunger-should-not-be-concern-wfp-steps-families-kenya-who-fled",
+      "doi": "",
+      "module": "news",
+      "published_at": "2026-11-17",
+      "date_precision": "day",
+      "discovered_at": "2026-11-18T15:13:23+00:00",
+      "updated_at": "2026-11-18T15:13:23+00:00",
+      "evidence_basis": "官方新闻目录元数据",
+      "source_revision": "e3b1042046b48ae907558208747ded5b5a38b57c9d895735f5669f16720f1fe5",
+      "topics": [],
+      "authors": [],
+      "bibliography": {},
+      "material_type": "官方机构新闻报道",
+      "provenance": [
+        {
+          "source_id": "un-geneva-news",
+          "url": "https://www.ungeneva.org/en/news-media/news/2026/11/124932/hunger-should-not-be-concern-wfp-steps-families-kenya-who-fled",
+          "seen_at": "2026-11-18T15:13:23+00:00"
+        }
+      ],
+      "title_zh": "",
+      "summary_zh": "",
+      "ai": null,
       "event": null,
       "deadline": null
     },
@@ -314,8 +417,9 @@
       "published_at": "2026-11-17",
       "date_precision": "day",
       "discovered_at": "2026-11-18T13:45:30+00:00",
-      "updated_at": "2026-11-18T13:45:30+00:00",
-      "evidence_basis": "官方新闻目录元数据（首次核对）",
+      "updated_at": "2026-11-18T15:13:23+00:00",
+      "evidence_basis": "官方新闻目录元数据",
+      "source_revision": "288d2d162e0cd652f9129b955fb5f49844f5584687dd5a6ff5b89cc1313cdf31",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -324,7 +428,7 @@
         {
           "source_id": "un-geneva-news",
           "url": "https://www.ungeneva.org/en/news-media/news/2026/11/124961/ukraine-civilian-casualties-2026-already-far-exceed-previous-years",
-          "seen_at": "2026-11-18T14:50:49+00:00"
+          "seen_at": "2026-11-18T15:13:23+00:00"
         }
       ],
       "title_zh": "联合国新闻：乌克兰2026年平民伤亡已远超往年",
@@ -332,7 +436,7 @@
       "ai": {
         "model": "Codex（首次新闻目录译名）",
         "processed_at": "2026-11-18T13:45:30+00:00",
-        "basis": "官方新闻目录元数据（首次核对）"
+        "basis": "官方新闻目录元数据"
       },
       "event": null,
       "deadline": null
@@ -347,8 +451,9 @@
       "published_at": "2026-11-17",
       "date_precision": "day",
       "discovered_at": "2026-11-18T13:45:30+00:00",
-      "updated_at": "2026-11-18T13:45:30+00:00",
-      "evidence_basis": "官方新闻目录元数据（首次核对）",
+      "updated_at": "2026-11-18T15:13:23+00:00",
+      "evidence_basis": "官方新闻目录元数据",
+      "source_revision": "f1070c9d153102bbc920bfe95b2f3a180a64919d50a12f85b9c24fa39dcbbde2",
       "topics": [
         "ocean-climate"
       ],
@@ -359,7 +464,7 @@
         {
           "source_id": "un-geneva-news",
           "url": "https://www.ungeneva.org/en/news-media/news/2026/11/124934/cop31-push-protect-warming-oceans-reaches-negotiating-table",
-          "seen_at": "2026-11-18T14:50:49+00:00"
+          "seen_at": "2026-11-18T15:13:23+00:00"
         }
       ],
       "title_zh": "COP31：保护变暖海洋的议题进入谈判议程",
@@ -367,7 +472,7 @@
       "ai": {
         "model": "Codex（首次新闻目录译名）",
         "processed_at": "2026-11-18T13:45:30+00:00",
-        "basis": "官方新闻目录元数据（首次核对）"
+        "basis": "官方新闻目录元数据"
       },
       "event": null,
       "deadline": null
@@ -382,8 +487,9 @@
       "published_at": "2026-11-17",
       "date_precision": "day",
       "discovered_at": "2026-11-18T13:45:30+00:00",
-      "updated_at": "2026-11-18T13:45:30+00:00",
-      "evidence_basis": "官方新闻目录元数据（首次核对）",
+      "updated_at": "2026-11-18T15:13:23+00:00",
+      "evidence_basis": "官方新闻目录元数据",
+      "source_revision": "770f6ecec542cf9368f76f5a4a91080b15b84cd024bd0cc20d0c9b3793ab7447",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -392,7 +498,7 @@
         {
           "source_id": "un-geneva-news",
           "url": "https://www.ungeneva.org/en/news-media/news/2026/11/124887/guterres-calls-legally-binding-instrument-killer-robots",
-          "seen_at": "2026-11-18T14:50:49+00:00"
+          "seen_at": "2026-11-18T15:13:23+00:00"
         }
       ],
       "title_zh": "古特雷斯呼吁为“杀手机器人”制定具有法律约束力的文书",
@@ -400,7 +506,7 @@
       "ai": {
         "model": "Codex（首次新闻目录译名）",
         "processed_at": "2026-11-18T13:45:30+00:00",
-        "basis": "官方新闻目录元数据（首次核对）"
+        "basis": "官方新闻目录元数据"
       },
       "event": null,
       "deadline": null
@@ -415,8 +521,9 @@
       "published_at": "2026-11-17",
       "date_precision": "day",
       "discovered_at": "2026-11-18T13:45:30+00:00",
-      "updated_at": "2026-11-18T13:45:30+00:00",
-      "evidence_basis": "官方新闻目录元数据（首次核对）",
+      "updated_at": "2026-11-18T15:13:23+00:00",
+      "evidence_basis": "官方新闻目录元数据",
+      "source_revision": "ce077ec312805a069336c4158e692ded7f1eb0f3f606ba0df1790b8584cf16ac",
       "topics": [
         "rights"
       ],
@@ -427,7 +534,7 @@
         {
           "source_id": "un-geneva-news",
           "url": "https://www.ungeneva.org/en/news-media/news/2026/11/124886/funding-cuts-raise-risks-trafficking-and-exploitation-refugee",
-          "seen_at": "2026-11-18T14:50:49+00:00"
+          "seen_at": "2026-11-18T15:13:23+00:00"
         }
       ],
       "title_zh": "联合国新闻：资金削减加大难民儿童遭贩运与剥削的风险",
@@ -435,7 +542,7 @@
       "ai": {
         "model": "Codex（首次新闻目录译名）",
         "processed_at": "2026-11-18T13:45:30+00:00",
-        "basis": "官方新闻目录元数据（首次核对）"
+        "basis": "官方新闻目录元数据"
       },
       "event": null,
       "deadline": null
@@ -452,6 +559,7 @@
       "discovered_at": "2026-11-18T10:18:54+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "1f5ae32f1ee8a66eeacf159dd6a4b9792755db02387b23287974789ce648dd24",
       "topics": [
         "economic",
         "rights"
@@ -486,6 +594,7 @@
       "discovered_at": "2026-11-18T10:18:54+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "7e023f1a76c20a2c647d4da3337c73290dc1a156d263377365df49933c4008f9",
       "topics": [],
       "authors": [
         "Sergey Sayapin"
@@ -517,6 +626,7 @@
       "discovered_at": "2026-11-18T10:18:54+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "9951f27083330360a5732d202e9d1c85ac98e447611d51a2aec49f6dabd43271",
       "topics": [],
       "authors": [
         "Sergey Sayapin"
@@ -537,6 +647,40 @@
       "deadline": null
     },
     {
+      "id": "97a37eb28d058be862b6",
+      "source_id": "ejiltalk",
+      "title": "Pre-Trial Chamber II of the ICC Closes (or Attempts to Close?) the Afghanistan Investigation",
+      "url": "https://www.ejiltalk.org/pre-trial-chamber-ii-of-the-icc-closes-or-attempts-to-close-the-afghanistan-investigation/",
+      "doi": "",
+      "module": "commentary",
+      "published_at": "2026-11-16T08:00:19+00:00",
+      "date_precision": "instant",
+      "discovered_at": "2026-11-18T15:13:25+00:00",
+      "updated_at": "2026-11-18T15:13:25+00:00",
+      "evidence_basis": "RSS 摘录",
+      "source_revision": "d006e71f92f476e2961c0b4ef316a34e2d5ff2b7bc5df651ea10a1c8eea0ae0c",
+      "topics": [
+        "rights"
+      ],
+      "authors": [
+        "Priya Urs"
+      ],
+      "bibliography": {},
+      "material_type": "学术平台文章",
+      "provenance": [
+        {
+          "source_id": "ejiltalk",
+          "url": "https://www.ejiltalk.org/pre-trial-chamber-ii-of-the-icc-closes-or-attempts-to-close-the-afghanistan-investigation/",
+          "seen_at": "2026-11-18T15:13:25+00:00"
+        }
+      ],
+      "title_zh": "",
+      "summary_zh": "",
+      "ai": null,
+      "event": null,
+      "deadline": null
+    },
+    {
       "id": "77febc8622fc71310352",
       "source_id": "esil",
       "title": "ESIL Rapid Response Roundtables | The Gambia v. Myanmar from a Transregional Perspective: The ICJ Judgment and Its Implications for the Rohingya and Beyond | 3 December 2026",
@@ -548,6 +692,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "041eef6755a14532bd6efaeca50e5b022daeba3fe59c6f2a2f8307c15cc46cb1",
       "topics": [
         "disputes"
       ],
@@ -589,6 +734,7 @@
       "discovered_at": "2026-11-18T14:46:51+00:00",
       "updated_at": "2026-11-18T14:46:51+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "03e2ee16da6e5a2f564e0d1a9121d64431023c8c190362ef4216078fd9990610",
       "topics": [
         "institutions"
       ],
@@ -611,6 +757,70 @@
       "deadline": null
     },
     {
+      "id": "689699f5b1547fd831d9",
+      "source_id": "ejiltalk",
+      "title": "Two Weeks in Review: 2—13 November 2026",
+      "url": "https://www.ejiltalk.org/two-weeks-in-review-2-13-november-2026/",
+      "doi": "",
+      "module": "commentary",
+      "published_at": "2026-11-15T12:00:23+00:00",
+      "date_precision": "instant",
+      "discovered_at": "2026-11-18T15:13:25+00:00",
+      "updated_at": "2026-11-18T15:13:25+00:00",
+      "evidence_basis": "RSS 摘录",
+      "source_revision": "32964f1ca07884162cba913a7d6c05c76e42001ae1fa7f879e71582fc62957c5",
+      "topics": [],
+      "authors": [
+        "Sebastian von Massow"
+      ],
+      "bibliography": {},
+      "material_type": "学术平台文章",
+      "provenance": [
+        {
+          "source_id": "ejiltalk",
+          "url": "https://www.ejiltalk.org/two-weeks-in-review-2-13-november-2026/",
+          "seen_at": "2026-11-18T15:13:25+00:00"
+        }
+      ],
+      "title_zh": "",
+      "summary_zh": "",
+      "ai": null,
+      "event": null,
+      "deadline": null
+    },
+    {
+      "id": "023f5f16b369251ae665",
+      "source_id": "ejiltalk",
+      "title": "Announcements: CfP Polar Law Symposium; CfS International Water Law; CfP ANZSIL Annual Conference; CfA Vox Legis; CfP Informal International Law and Foreign Relations Law",
+      "url": "https://www.ejiltalk.org/announcements-cfp-polar-law-symposium-cfs-international-water-law-cfp-anzsil-annual-conference-cfa-vox-legis-cfp-informal-international-law-and-foreign-relations-law/",
+      "doi": "",
+      "module": "commentary",
+      "published_at": "2026-11-15T10:00:36+00:00",
+      "date_precision": "instant",
+      "discovered_at": "2026-11-18T15:13:25+00:00",
+      "updated_at": "2026-11-18T15:13:25+00:00",
+      "evidence_basis": "RSS 摘录",
+      "source_revision": "079ec43f9439cac6e56e83f05b2f4a2562bf8ea3a22de714ed9c8fb88091cf94",
+      "topics": [],
+      "authors": [
+        "Mary Guest"
+      ],
+      "bibliography": {},
+      "material_type": "学术平台文章",
+      "provenance": [
+        {
+          "source_id": "ejiltalk",
+          "url": "https://www.ejiltalk.org/announcements-cfp-polar-law-symposium-cfs-international-water-law-cfp-anzsil-annual-conference-cfa-vox-legis-cfp-informal-international-law-and-foreign-relations-law/",
+          "seen_at": "2026-11-18T15:13:25+00:00"
+        }
+      ],
+      "title_zh": "",
+      "summary_zh": "",
+      "ai": null,
+      "event": null,
+      "deadline": null
+    },
+    {
       "id": "dcb0025127b9aa379668",
       "source_id": "opiniojuris",
       "title": "Events and Announcements: 15 November 2026",
@@ -622,6 +832,7 @@
       "discovered_at": "2026-11-18T10:18:54+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "c77bd1f6e7a25e5db1ea341b3ff6095304ccad932dd1a3b2abf775fcf60aaf13",
       "topics": [],
       "authors": [
         "Emilia Klebanowski"
@@ -653,6 +864,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "fa5538fe1820c77aec0f50b5aee241fef58a06727cfb4d001e0928ae84c8dade",
       "topics": [],
       "authors": [
         "Henning Grosse Ruse-Khan"
@@ -693,6 +905,7 @@
       "discovered_at": "2026-11-18T10:18:54+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "dfa27fde00e52997239c11e3a1ca1d5e530f6e67dc0f513e10747c1922fd37c9",
       "topics": [],
       "authors": [
         "Alessia Corti"
@@ -724,6 +937,7 @@
       "discovered_at": "2026-11-18T10:18:54+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "0a117f79226a1d69aec62f60004d6ce8d41193f925084910060f61562e288e78",
       "topics": [],
       "authors": [
         "Nivedita S"
@@ -755,6 +969,7 @@
       "discovered_at": "2026-11-18T10:18:54+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "c1b109a5794dbc06b8e0676907bc34e73249543b06efb73daf9063936e233e70",
       "topics": [],
       "authors": [
         "Lu Yaoyao"
@@ -775,6 +990,40 @@
       "deadline": null
     },
     {
+      "id": "61950c019053cb41dfae",
+      "source_id": "ejiltalk",
+      "title": "Splitting the ICC’s Afghanistan Investigation: Judicial Oversight or Overreach?",
+      "url": "https://www.ejiltalk.org/splitting-the-iccs-afghanistan-investigation-judicial-oversight-or-overreach/",
+      "doi": "",
+      "module": "commentary",
+      "published_at": "2026-11-13T08:00:08+00:00",
+      "date_precision": "instant",
+      "discovered_at": "2026-11-18T15:13:25+00:00",
+      "updated_at": "2026-11-18T15:13:25+00:00",
+      "evidence_basis": "RSS 摘录",
+      "source_revision": "932e465ce751d952a69b6377a654176ca1d87e25d8499d2ac357a5d01ea606c2",
+      "topics": [
+        "rights"
+      ],
+      "authors": [
+        "Miles Jackson"
+      ],
+      "bibliography": {},
+      "material_type": "学术平台文章",
+      "provenance": [
+        {
+          "source_id": "ejiltalk",
+          "url": "https://www.ejiltalk.org/splitting-the-iccs-afghanistan-investigation-judicial-oversight-or-overreach/",
+          "seen_at": "2026-11-18T15:13:25+00:00"
+        }
+      ],
+      "title_zh": "",
+      "summary_zh": "",
+      "ai": null,
+      "event": null,
+      "deadline": null
+    },
+    {
       "id": "080aaba7cc81ba9b2dac",
       "source_id": "wto",
       "title": "Ireland contributes EUR 200,000 to strengthen trade opportunities in developing countries",
@@ -786,6 +1035,7 @@
       "discovered_at": "2026-11-18T10:16:03+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "f3608f45a87ab06cdf07276a54c9de392d1753c350fbda877d3329655c0838ae",
       "topics": [
         "economic"
       ],
@@ -817,6 +1067,7 @@
       "discovered_at": "2026-11-18T14:46:51+00:00",
       "updated_at": "2026-11-18T14:46:51+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "8b3ebba67e5f644a969f3df9c123a61f73bfba3d68e0409ef96c4dd02d8f12da",
       "topics": [
         "institutions",
         "economic"
@@ -851,6 +1102,7 @@
       "discovered_at": "2026-11-18T10:18:54+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "6e4183513e31191a37c9927a04600d4ec0616fe9e34125c22e0810c678807e24",
       "topics": [],
       "authors": [
         "Estéfany Rocha Monteiro"
@@ -882,6 +1134,7 @@
       "discovered_at": "2026-11-18T10:18:54+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "1308e7e2c4251a41170dae73922a443727494f7ae1d1fb4a6c9b482afbad6ae8",
       "topics": [],
       "authors": [
         "Lakshmidevi Somanath"
@@ -913,6 +1166,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "00078cd507c2672f1f068203bd66747ce0dd3ad83de7ed911e462c3e588b3b96",
       "topics": [],
       "authors": [
         "Rimdolmsom Jonathan Kabré"
@@ -953,6 +1207,7 @@
       "discovered_at": "2026-11-18T14:46:53+00:00",
       "updated_at": "2026-11-18T14:46:53+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "d9267f0f3acc43dda8fb277bb63e7090107a477685608dcc89e38c4c0b2031dc",
       "topics": [
         "disputes"
       ],
@@ -984,6 +1239,7 @@
       "discovered_at": "2026-11-18T10:18:54+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "c0ccf393c6cee968cbc2ed35a0ed604cdd753bd96e8a25eca0e8d2cd2ce3af54",
       "topics": [
         "rights"
       ],
@@ -1017,6 +1273,7 @@
       "discovered_at": "2026-11-18T10:18:54+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "4cb4dc3a6b18d7d2735084362e701e59f171f692dbcb596decc7bc563ba1a846",
       "topics": [],
       "authors": [
         "Shaoxuan Xu"
@@ -1037,6 +1294,40 @@
       "deadline": null
     },
     {
+      "id": "9c8b144cd5b0180fc2b5",
+      "source_id": "ejiltalk",
+      "title": "Fair Share Obligations in Climate Change Litigation: Towards a Global Carbon Approach?",
+      "url": "https://www.ejiltalk.org/fair-share-obligations-in-climate-change-litigation-towards-a-global-carbon-approach/",
+      "doi": "",
+      "module": "commentary",
+      "published_at": "2026-11-11T08:00:00+00:00",
+      "date_precision": "instant",
+      "discovered_at": "2026-11-18T15:13:25+00:00",
+      "updated_at": "2026-11-18T15:13:25+00:00",
+      "evidence_basis": "RSS 摘录",
+      "source_revision": "2dc11bd4d014a2604fcdd37e6c9bf504204070df8394f85a33976f8d32c3bfde",
+      "topics": [
+        "ocean-climate"
+      ],
+      "authors": [
+        "Rebecca Walker"
+      ],
+      "bibliography": {},
+      "material_type": "学术平台文章",
+      "provenance": [
+        {
+          "source_id": "ejiltalk",
+          "url": "https://www.ejiltalk.org/fair-share-obligations-in-climate-change-litigation-towards-a-global-carbon-approach/",
+          "seen_at": "2026-11-18T15:13:25+00:00"
+        }
+      ],
+      "title_zh": "",
+      "summary_zh": "",
+      "ai": null,
+      "event": null,
+      "deadline": null
+    },
+    {
       "id": "4dcb318f6cbb0181cfea",
       "source_id": "esil",
       "title": "ESIL Newsletter – Autumn 2026",
@@ -1048,6 +1339,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "094bedc9e25cc4833208b62a2348c34e75dc27828240324affcd1b488dee5e4b",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -1079,6 +1371,7 @@
       "discovered_at": "2026-11-18T10:16:03+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "6085d3472d90e6a6512609054dc5d45f76487e5677a1ac5500e0e32c177a7c87",
       "topics": [
         "economic"
       ],
@@ -1110,6 +1403,7 @@
       "discovered_at": "2026-11-18T10:18:54+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "1451c4f2bdc7b7f83c4aaf5c89e68f276acac305e62a32f561e840604dab4ebc",
       "topics": [],
       "authors": [
         "Mia Colliard"
@@ -1141,6 +1435,7 @@
       "discovered_at": "2026-11-18T10:18:54+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "b26d145a7bf9dec13115d470314213218c6705a270b08ce5e3567b18dd463a99",
       "topics": [],
       "authors": [
         "Himani Jha"
@@ -1161,6 +1456,38 @@
       "deadline": null
     },
     {
+      "id": "27120a2061e7b5d5f2ed",
+      "source_id": "ejiltalk",
+      "title": "Generating the New World: A Critical Perspective on EJIL’s Policy on Gen AI Use",
+      "url": "https://www.ejiltalk.org/generating-the-new-world-a-critical-perspective-on-ejils-policy-on-gen-ai-use/",
+      "doi": "",
+      "module": "commentary",
+      "published_at": "2026-11-10T08:00:16+00:00",
+      "date_precision": "instant",
+      "discovered_at": "2026-11-18T15:13:25+00:00",
+      "updated_at": "2026-11-18T15:13:25+00:00",
+      "evidence_basis": "RSS 摘录",
+      "source_revision": "a2223ce7f8c6d22ffdc776af6cc207b8959f0dc2ab161de52ee6f7f416bc2e5f",
+      "topics": [],
+      "authors": [
+        "Akira Kato"
+      ],
+      "bibliography": {},
+      "material_type": "学术平台文章",
+      "provenance": [
+        {
+          "source_id": "ejiltalk",
+          "url": "https://www.ejiltalk.org/generating-the-new-world-a-critical-perspective-on-ejils-policy-on-gen-ai-use/",
+          "seen_at": "2026-11-18T15:13:25+00:00"
+        }
+      ],
+      "title_zh": "",
+      "summary_zh": "",
+      "ai": null,
+      "event": null,
+      "deadline": null
+    },
+    {
       "id": "766e345a0627451bd4e7",
       "source_id": "wto",
       "title": "Ethiopia's accession maintains momentum as WTO members review progress",
@@ -1172,6 +1499,7 @@
       "discovered_at": "2026-11-18T10:16:03+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "03c1d02f26a31c688aa66c04e0e5f4d75f2a02b338d4ba190c2279b2543a1ee1",
       "topics": [
         "economic"
       ],
@@ -1203,6 +1531,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "90195d08cae48b8d116a550b576497ec2099e80b0e7c40d85c3102f3c893a658",
       "topics": [
         "disputes"
       ],
@@ -1234,6 +1563,7 @@
       "discovered_at": "2026-11-18T14:46:50+00:00",
       "updated_at": "2026-11-18T14:46:50+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "db1e8bb166d8c7c22d218be3b259209514f4e6e08d76ccf9052469181fa4e6ff",
       "topics": [],
       "authors": [
         "ungeneva.org"
@@ -1265,6 +1595,7 @@
       "discovered_at": "2026-11-18T14:46:53+00:00",
       "updated_at": "2026-11-18T14:46:53+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "b78efd95ccd8d71e13b7d0c564f512a6dd1f9eb572ab49e13e77b98baa9ef678",
       "topics": [
         "disputes"
       ],
@@ -1296,6 +1627,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "f0a54cbd455cd8c66b49d62ed1060b12cf500a693d44f5afdb63d04f9c280740",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -1324,6 +1656,40 @@
       "deadline": null
     },
     {
+      "id": "f74a1132bfd3570c18f9",
+      "source_id": "ejiltalk",
+      "title": "The 2026 ICJ Election: The UK Returns, but Who is Out?",
+      "url": "https://www.ejiltalk.org/the-2026-icj-election-the-uk-returns-but-who-is-out/",
+      "doi": "",
+      "module": "commentary",
+      "published_at": "2026-11-09T08:00:53+00:00",
+      "date_precision": "instant",
+      "discovered_at": "2026-11-18T15:13:25+00:00",
+      "updated_at": "2026-11-18T15:13:25+00:00",
+      "evidence_basis": "RSS 摘录",
+      "source_revision": "16e4842e90d1f3f70d98010603509edea03a6c7f0dd1f2da0c6439ae4a1fb396",
+      "topics": [
+        "disputes"
+      ],
+      "authors": [
+        "Eric Chan"
+      ],
+      "bibliography": {},
+      "material_type": "学术平台文章",
+      "provenance": [
+        {
+          "source_id": "ejiltalk",
+          "url": "https://www.ejiltalk.org/the-2026-icj-election-the-uk-returns-but-who-is-out/",
+          "seen_at": "2026-11-18T15:13:25+00:00"
+        }
+      ],
+      "title_zh": "",
+      "summary_zh": "",
+      "ai": null,
+      "event": null,
+      "deadline": null
+    },
+    {
       "id": "56d7b9f43b73a4946513",
       "source_id": "voelkerrechtsblog",
       "title": "State Responsibility in Crisis",
@@ -1335,6 +1701,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "c6e94ae6abbdbbc6570d808ca3e387d0ad55b5a251187480de60b94866be8784",
       "topics": [
         "disputes"
       ],
@@ -1366,6 +1733,7 @@
       "discovered_at": "2026-11-18T10:16:03+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "b9aeaa5fb502961eee809195145a9a169f38dbc5a3dc3def4a93f6156c68d046",
       "topics": [
         "economic"
       ],
@@ -1386,6 +1754,40 @@
       "deadline": null
     },
     {
+      "id": "2e844c98f7c367656b54",
+      "source_id": "ejiltalk",
+      "title": "Announcements: CfS Board of Peace and its Role in International Law; New Research Tool for Inter-American Human Rights Case Law; CfP Reparations for Harm; Digital Dual Use Conference; Freedom of the Seas Conference; CfS Socio-Legal Studies Association Conference; Art and Cultural Heritage Summer School; The Unwritten Journal Podcast; CfP Leiden Journal of International Law; UCL Faculty of Law Events; Nuremberg Academy Dialogue; CfP Human Rights Essay Award",
+      "url": "https://www.ejiltalk.org/announcements-cfs-board-of-peace-and-its-role-in-international-law-new-research-tool-for-inter-american-human-rights-case-law-cfp-reparations-for-harm-digital-dual-use-conference-freedom-of-the-s/",
+      "doi": "",
+      "module": "events",
+      "published_at": "2026-11-08T10:00:26+00:00",
+      "date_precision": "instant",
+      "discovered_at": "2026-11-18T15:13:25+00:00",
+      "updated_at": "2026-11-18T15:13:25+00:00",
+      "evidence_basis": "RSS 摘录",
+      "source_revision": "00e0b3fd0cfc5d9543e38f81078ced11b0cacc6e1459c82c557ef1e2a14c3cb0",
+      "topics": [
+        "rights"
+      ],
+      "authors": [
+        "Mary Guest"
+      ],
+      "bibliography": {},
+      "material_type": "学术平台文章",
+      "provenance": [
+        {
+          "source_id": "ejiltalk",
+          "url": "https://www.ejiltalk.org/announcements-cfs-board-of-peace-and-its-role-in-international-law-new-research-tool-for-inter-american-human-rights-case-law-cfp-reparations-for-harm-digital-dual-use-conference-freedom-of-the-s/",
+          "seen_at": "2026-11-18T15:13:25+00:00"
+        }
+      ],
+      "title_zh": "",
+      "summary_zh": "",
+      "ai": null,
+      "event": null,
+      "deadline": null
+    },
+    {
       "id": "449b6bf1daafcef326f4",
       "source_id": "esil",
       "title": "ESIL at the Hague Justice Week | The ICJ at 100: Realistic Expectations on the World Court’s Next 20 Years | 17 November 2026",
@@ -1397,6 +1799,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "7f54e8a1dc18da5693798ea892c4cd9a176036a9bac3cc24c32d20fb422a70e9",
       "topics": [
         "disputes"
       ],
@@ -1430,6 +1833,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "4cbb55d14735b62d144aaaea33cc1ae3a220f768133a6e5f9824ff1a03c0dc59",
       "topics": [
         "rights"
       ],
@@ -1471,6 +1875,7 @@
       "discovered_at": "2026-11-18T10:16:03+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "1594df5082f46525f8669803c05a481c1d93508ace03cabff8f7e8e31022e17a",
       "topics": [
         "economic"
       ],
@@ -1502,6 +1907,7 @@
       "discovered_at": "2026-11-18T14:46:51+00:00",
       "updated_at": "2026-11-18T14:46:51+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "079720cbb9c5777a5e3fcc48cbc3a11afaf3d04ce4e7a26b015cfd6d80a562e8",
       "topics": [
         "institutions",
         "economic",
@@ -1537,6 +1943,7 @@
       "discovered_at": "2026-11-18T14:46:51+00:00",
       "updated_at": "2026-11-18T14:46:51+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "c0e0f672a94b7e5b8c06b168b2a1bdceb454e655e812ae8f16c2407b31d6d538",
       "topics": [
         "institutions",
         "economic"
@@ -1571,6 +1978,7 @@
       "discovered_at": "2026-11-18T10:16:03+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "f9b074162f429e633963e262d9e6c41b75a13883befb144a11b465d5c94ac96c",
       "topics": [
         "economic",
         "ocean-climate"
@@ -1603,6 +2011,7 @@
       "discovered_at": "2026-11-18T14:46:51+00:00",
       "updated_at": "2026-11-18T14:46:51+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "592a33c733234e2375b0c5fb439e6fa049f99743d5ba9d905bc932904937766d",
       "topics": [
         "institutions",
         "economic",
@@ -1638,6 +2047,7 @@
       "discovered_at": "2026-11-18T14:46:51+00:00",
       "updated_at": "2026-11-18T14:46:51+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "8cb92a70d126311128ad078dd7d9214707f19096a1b4d2c4be29d8c957ffb76e",
       "topics": [
         "institutions",
         "rights"
@@ -1672,6 +2082,7 @@
       "discovered_at": "2026-11-18T10:16:03+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "26540184c7e3e79bc8229b4b2e2478cc37f9a6fc229ebdf26196fae75c72b74a",
       "topics": [
         "economic"
       ],
@@ -1703,6 +2114,7 @@
       "discovered_at": "2026-11-18T10:16:03+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "1759f802865d7abbe67803ed633a5388455ed86ca056f4591df9b7b4ca0b03a3",
       "topics": [
         "economic"
       ],
@@ -1734,6 +2146,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "7f40bdbb28a3b89818cf98f0f113d7161d01755bff8397718fbe25bcbd6c8493",
       "topics": [
         "disputes",
         "institutions"
@@ -1766,6 +2179,7 @@
       "discovered_at": "2026-11-18T14:46:51+00:00",
       "updated_at": "2026-11-18T14:46:51+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "307b5e2fd8519c88683da04892de55a3166bbef87caa1d6252357b4d76249c5a",
       "topics": [
         "institutions",
         "economic"
@@ -1800,6 +2214,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "608ad9e5ce74b4fcadaa6e66de283245e1248cd7f84504c840dfd009c7e61a58",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -1839,6 +2254,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "399c5745326a1a23179bae72a4813b4b878f548af85316701c049cf285ed8d3a",
       "topics": [
         "disputes",
         "rights"
@@ -1871,6 +2287,7 @@
       "discovered_at": "2026-11-18T14:46:51+00:00",
       "updated_at": "2026-11-18T14:46:51+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "7e94c0254d2031f1e7b62503a5dd33fdc04725bef6908d49ea0ebbb78c722e1c",
       "topics": [
         "institutions",
         "economic"
@@ -1905,6 +2322,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "897bdf41097fb0b5faed02a1a91e7d8e3f83faa925cba9a113f2aa2162d7f83f",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -1934,6 +2352,7 @@
       "discovered_at": "2026-11-18T10:16:03+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "0b7210f17121bdb90a5bf4382adb59f15c16d46d3a0dd60b15a33097419f780a",
       "topics": [
         "economic"
       ],
@@ -1965,6 +2384,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "9222a08ed33a7b04329bc4ff26833ad0e98ebad1fc5e4ad68ed31ed267bedc99",
       "topics": [],
       "authors": [
         "Tommaso Soave",
@@ -2006,6 +2426,7 @@
       "discovered_at": "2026-11-18T14:46:51+00:00",
       "updated_at": "2026-11-18T14:46:51+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "80bcd61716d45a25737fde5f52782eb15cde6e7a5f431a96a793bb92475330e2",
       "topics": [
         "institutions",
         "economic"
@@ -2040,6 +2461,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "a8a15cf76bc6952e330c99cf77a830937f2392a38247948dae85cc4c955ce710",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -2069,6 +2491,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "17a0d312f90d2e10fb40ac83c2b54009daec1af5696ebf9c5951c374856a372b",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -2100,6 +2523,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "ec5bf9630eebf6b8bfa816e2323e50f6170d6b1d49908abddf9edd14412ce899",
       "topics": [
         "ocean-climate"
       ],
@@ -2131,6 +2555,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "7a3d3481a444b6662719b9bfebc1b50f8820a303d3fea7fdd22bf8196a70113a",
       "topics": [
         "economic"
       ],
@@ -2162,6 +2587,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "d45a337de17a1c10bb7b8e8bee918b374ba93935281dc8713c85cdff7b9af960",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -2191,6 +2617,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "afdcc6567570c69c0d0205da8a3a8118c38f8d42854d1dde8e6116b368888d00",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -2220,6 +2647,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "fcf50dfbc9806c160bae56f59f253050ba92d360fcbefb6854ec9526526b3d7f",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -2249,6 +2677,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "d5babfb3c0c6f3b30018504bb669d39f70d7863d4a42799edc6938f3d7e4a3e0",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -2278,6 +2707,7 @@
       "discovered_at": "2026-11-18T14:46:51+00:00",
       "updated_at": "2026-11-18T14:46:51+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "e42c98d02c9a5c90bd5a58d7a57870dba4ec59b2ddc39a2c13ca14c3cf9da1c6",
       "topics": [
         "institutions"
       ],
@@ -2311,6 +2741,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "03e6f60bb411a536c08720e79370218744fa2f3d40ece279f9630c54e44f096e",
       "topics": [
         "disputes",
         "institutions"
@@ -2343,6 +2774,7 @@
       "discovered_at": "2026-11-18T14:46:50+00:00",
       "updated_at": "2026-11-18T14:46:50+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "0a386ef8d2208bf08dd05af60cad99a3e52fa927d9df75ab7765d6df37cd8277",
       "topics": [],
       "authors": [
         "ungeneva.org"
@@ -2374,6 +2806,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "a1db65c1cebcb2c455e96a25fb125957ebc4214d91e768b32c5c9ef369442a66",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -2405,6 +2838,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "9215403fdbea2957a029c9b5635a6d881ddece320b7bdb1f325097c26f846698",
       "topics": [
         "disputes"
       ],
@@ -2436,6 +2870,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "e21d394c0ec27bbfbd09665ea14177b02c06586968e0255c0cb5814a70841414",
       "topics": [],
       "authors": [
         "Christophe Wasinski"
@@ -2476,6 +2911,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "d62d363c93cf918f0d5ceb9254d36cd1e19e40a37a6e55d85e903cbc92d3e3d9",
       "topics": [
         "institutions"
       ],
@@ -2518,6 +2954,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "1da0f261eada584390c65e5a6b8bb0858120e260e972673ebb17e79fa2bc798e",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -2549,6 +2986,7 @@
       "discovered_at": "2026-11-18T14:46:53+00:00",
       "updated_at": "2026-11-18T14:46:53+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "731eeef6b24d423f4f37c95b605c9294b1102b53cfe776cf73ad2565fc892440",
       "topics": [
         "disputes"
       ],
@@ -2580,6 +3018,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "34c91930e6ab6e94ceab7c4c3dec9ba9ac07f27cc5afa6acc9dbb4dec6348272",
       "topics": [],
       "authors": [
         "Lucas Lixinski",
@@ -2621,6 +3060,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "06799b0109ebf61b40564b8c679e63dbd46d5d510a3d6034859967e6989e03fe",
       "topics": [
         "disputes"
       ],
@@ -2665,6 +3105,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "2d0f93b74f88108257fc53c67e4ef866c9ab022539cd80521d352285167d1bd6",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -2694,6 +3135,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "a7837499698f4952bbea832495988086a47ec364d3892aeeb626666c04bec2ae",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -2723,6 +3165,7 @@
       "discovered_at": "2026-11-18T14:46:53+00:00",
       "updated_at": "2026-11-18T14:46:53+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "b1886479a909aeed2ca875b59c0fd2f6d3f1e8bdf53602a6ab8ea75c2c40a488",
       "topics": [
         "disputes"
       ],
@@ -2754,6 +3197,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "32e763afcbd7c8eb3af74b6e651b4bdea107bfaccbe6c4bca4da9638a5e4bb4f",
       "topics": [],
       "authors": [
         "Jaye Ellis"
@@ -2794,6 +3238,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "b242d27c8f07ef259762ff303cf8ffcaae8e80b7ae8958cecac52d006f9ef066",
       "topics": [
         "economic",
         "rights"
@@ -2828,6 +3273,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "fc3ca2eea222cf8193226cf973a91745400bb2526d56d11ab9275f192f743890",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -2859,6 +3305,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "1d7995aa3f0eab320fd372b28ffae1c068066140af406e0877dfc51c4cf08ffc",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -2890,6 +3337,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "039be792ff00c0451b7473bef7d1291f318cab4b74c77256b2071d5a3e5357cd",
       "topics": [
         "rights",
         "theory"
@@ -2922,6 +3370,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "fe7818ae387fb811b1f22cbd30d4e4edb556b66ca8d23197c35dce8bc38e2399",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -2951,6 +3400,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "51f39fb3b4966247df459c23d1aed22721434b0fdbf4b0ccc0c08f053be739f6",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -2980,6 +3430,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "db13e4257609a0a847f1e131e28899690558e774f6bbffc1f2d31acb36ab9b62",
       "topics": [
         "rights",
         "theory"
@@ -3012,6 +3463,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "6de7b2c96be66419acc49f71870f7ad66b7a2626497b70297dfbbaf150805517",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -3041,6 +3493,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "57d9011ab5c7b423992a1a75b3b04a5a284b197da8a235ecc6adc416b91b98ba",
       "topics": [
         "rights"
       ],
@@ -3083,6 +3536,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "76995db284071bab8ba246af5135b1a8aa134d6cc9503fe9b533cfea845e163c",
       "topics": [
         "ocean-climate"
       ],
@@ -3126,6 +3580,7 @@
       "discovered_at": "2026-11-18T14:46:53+00:00",
       "updated_at": "2026-11-18T14:46:53+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "a248bce7ff7c4f26c7a1933096d108a640d8fb3a1c1c3a6c3d221d6b7123956f",
       "topics": [
         "disputes"
       ],
@@ -3157,6 +3612,7 @@
       "discovered_at": "2026-11-18T14:46:50+00:00",
       "updated_at": "2026-11-18T14:46:50+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "1b790a5ada1358fffc03c3179ccf5e3b8c1de724cc5393ca42df4598d0af260e",
       "topics": [
         "rights"
       ],
@@ -3190,6 +3646,7 @@
       "discovered_at": "2026-11-18T14:46:53+00:00",
       "updated_at": "2026-11-18T14:46:53+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "9dc207f2d60ba699bd1a192c0f373f4e4313d9bc37a869f494ff5dff10db7001",
       "topics": [
         "disputes"
       ],
@@ -3221,6 +3678,7 @@
       "discovered_at": "2026-11-18T14:46:53+00:00",
       "updated_at": "2026-11-18T14:46:53+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "9495896a2d66a42ef066a51c41dff4e055840bd0a4a81b7949b877e518c57174",
       "topics": [
         "disputes"
       ],
@@ -3252,6 +3710,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "3880918cc08d2d8b67f9aa72c0678e6a02af0ebaecf4e2b11b6af6eddb5d4d0c",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -3283,6 +3742,7 @@
       "discovered_at": "2026-11-18T14:46:53+00:00",
       "updated_at": "2026-11-18T14:46:53+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "1b6886dab6b5266e7cd7e5a4ad9efffa39766f8c4a04cbd118c3ed0c45e7ac6f",
       "topics": [
         "disputes"
       ],
@@ -3314,6 +3774,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "aa4a343a086f534a5d0025d47126882455644a8c8ea77b68041c42c05920c514",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -3345,6 +3806,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "65570c767c837196adc149a11229ae1b0627c2a2c59956ef52474642c1e31168",
       "topics": [
         "ocean-climate"
       ],
@@ -3378,6 +3840,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "e0562a6097d4097419012d5dec040911624f1840d44a4c519bf9debd4dff3006",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -3409,6 +3872,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "b3ab9428388ace29186bf21a0f8064e6c23f524c42ebab14e6ecb599a7a42cc6",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -3440,6 +3904,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "8b18b1e7cc9cfd9ffdcc8fcafa8d4604676e8a65d628d9d1c57b952f11530f7a",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -3471,6 +3936,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "590950de4d62feaf51e63107eded59cb4f40f8959d1a8484616dddecc3eb3a0e",
       "topics": [],
       "authors": [
         "Miracle Chinwenmeri Uche"
@@ -3511,6 +3977,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "9c493e0fdd95a57fd73b19047712a625f6fb8862bdd80a5f0ff88c4c40a4f76e",
       "topics": [
         "ocean-climate",
         "rights"
@@ -3554,6 +4021,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "6c394af6c8fd78d2483d4222c514581502b9b5f39e022d5124178fdfe2e703ac",
       "topics": [],
       "authors": [
         "Diego Acosta",
@@ -3595,6 +4063,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "1927060920a235773fdfdade6ac5bc48a1648c0983f48204120f24fcf6016fee",
       "topics": [],
       "authors": [
         "Jan Klabbers"
@@ -3635,6 +4104,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "cab76f3288d71a47e39e9e0c8fab67c052ca9f35bdf7f00b747d22aeac73fdba",
       "topics": [],
       "authors": [
         "Curtis A. Bradley"
@@ -3675,6 +4145,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "ffddaf952837afc4fb55dd76181919eb076790e1870be285e77ffcaf305c6b80",
       "topics": [],
       "authors": [
         "Fabia Fernandes Carvalho"
@@ -3715,6 +4186,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "f44855aed242574a46486f19a4afdd3572aca333968d864d4d85e456774cf04e",
       "topics": [
         "economic"
       ],
@@ -3757,6 +4229,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "9ff96450887b14b9873c940699f7cfe89b4b66673fe0b73cea3ef22a72250213",
       "topics": [
         "economic"
       ],
@@ -3799,6 +4272,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "d3d50217e3c3e5338226a6f782b4c8cf01eac3dda0c00084962afe81e326214b",
       "topics": [
         "rights"
       ],
@@ -3842,6 +4316,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "0b5eab24c1c6844f87880097b34b02ab3eb94039e5b6fb5c993ede3c62f94002",
       "topics": [],
       "authors": [
         "Lorenzo Gasbarri"
@@ -3882,6 +4357,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "6876e8b6698c210fa2322321ed83f11d1969c108dd48b063473084e4ad785d49",
       "topics": [],
       "authors": [
         "Justina Uriburu"
@@ -3922,6 +4398,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "e8c42d28c230d9e584489a5883575192ad3f2b8e4ff69e7972d9dc34820bae6d",
       "topics": [],
       "authors": [
         "Florian Kriener"
@@ -3962,6 +4439,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "6e364adc028f6a0f20dde934ee9095980218fcd2df3d8e0c9a13f3a34c687dfb",
       "topics": [],
       "authors": [],
       "bibliography": {
@@ -4000,6 +4478,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "fe6297602e744cb02d24642a9aab1952226061ac89c578f4de7be8cf8039171d",
       "topics": [
         "economic"
       ],
@@ -4044,6 +4523,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "1ecde72a5868eea17edf452768d65600cda67c35159db07f644ecbf65b5725d9",
       "topics": [],
       "authors": [
         "Harold Hongju Koh"
@@ -4084,6 +4564,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "ce0285ba9f4dfa32003ed0d8aad5d2799d704fb9891fbc29412c91f182ea4093",
       "topics": [
         "rights"
       ],
@@ -4126,6 +4607,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "9f7a715c52338bf1a523b8986bbb45b72d2279af8986332d69d12bc396f223ee",
       "topics": [],
       "authors": [],
       "bibliography": {
@@ -4164,6 +4646,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "4a508074e5520ecd5a53f97336e35f444e1ac73e0e8d5933aead779a3accf096",
       "topics": [],
       "authors": [
         "Jacob Katz Cogan"
@@ -4204,6 +4687,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "91fa7cb5561b2c4860b5ac3d0a1f286b8cd0cbbbd8b88d64664fdf53ddd55496",
       "topics": [
         "disputes",
         "economic"
@@ -4247,6 +4731,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "c8df9e0c1c58521c892b7bc1b335684695917d08766267e826cd613ba7d76a13",
       "topics": [],
       "authors": [
         "Harlan Grant Cohen",
@@ -4288,6 +4773,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "4f0ced8bcb7fd699c17c26a93754da3b4246c4f8c41fe4fa78e712e7d9656186",
       "topics": [],
       "authors": [
         "Alejandro Chehtman"
@@ -4328,6 +4814,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "d7c4fbc6f2f92f670ea8693e36ae6193cc6431a4cba78918491a4ea71f6042ed",
       "topics": [],
       "authors": [
         "Diane Marie Amann",
@@ -4369,6 +4856,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "843853b9a3e6d72c1851d3b2c4281057da1ff835c4bca0986fc6b7ee029f908d",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -4398,6 +4886,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "c810d3d7fcdf1f8554a7389281aacfffee170135e2fc3b1ae391e8e678f4f7f1",
       "topics": [],
       "authors": [
         "Nikolas M. Rajkovic"
@@ -4438,6 +4927,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "2c4a15a35d5af5db0f4701a5759654c01c08d8c02e8ad00a08a7bb49f6373715",
       "topics": [],
       "authors": [
         "Joseph Powderly",
@@ -4479,6 +4969,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "b398faf0384c2aa50d6e714a9ad991525c20d086669890c5cf6382b7785c93f3",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -4510,6 +5001,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "7cf5f7e049b01fdd6a4d258515daa599c7567987776da4929806a4ee1302c4e4",
       "topics": [],
       "authors": [
         "Ardi Imseis"
@@ -4550,6 +5042,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "9e57a2a9a7adf28940b56a637ea8e2d1f78b6ad5c3beda73996c3c73fd5dc08f",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -4581,6 +5074,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "54a43e0472b23e907d470dcb5d058a22ed5fa2dee80431a6be8cf3e29df46c20",
       "topics": [],
       "authors": [
         "Emily Crawford"
@@ -4621,6 +5115,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "f30e11d39c666a2f9698d95339ddfd54c9cd95b4bcec45872b78169ffa171b58",
       "topics": [],
       "authors": [
         "Rafael Carrano Lelis"
@@ -4661,6 +5156,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "33ce8e90bba688fd4b5b72428c39e2aecafa047399ee1aee14e35df26992a772",
       "topics": [],
       "authors": [
         "Ryan Martínez Mitchell"
@@ -4701,6 +5197,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "1e2781d638952328356abb5bbffe3afe9b70581a52afcaef2e675ff478abc4f5",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -4732,6 +5229,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "c8392295ab706e0568fd8bd9876dd0895b87f600f06fefcfc3ede4d2acfdf4a3",
       "topics": [
         "disputes",
         "rights"
@@ -4764,6 +5262,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "3d2193c27015d23fbea95a95a66c64b333943a26146946b689b85b1d2ada8788",
       "topics": [],
       "authors": [
         "Kubo Mačák"
@@ -4804,6 +5303,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "99e74bdd3cd18dc8507428c96e1560bf0ae3c841c23058f34d0d7719a6e70b42",
       "topics": [
         "rights"
       ],
@@ -4846,6 +5346,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "5ed79eff95b998510f1470a334b29a4151f8b5e883af172c3d8b947fc4d6b7e3",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -4875,6 +5376,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "3f429f1dde12a97dbd16d30b493bd518e6152b86085f48f575f0f7bba3b3debd",
       "topics": [],
       "authors": [
         "Michelle Burgis-Kasthala"
@@ -4915,6 +5417,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "c6c26ab2a147efe507e0a7ee174f7fa97bda93dc0ce3403c3634f09163341838",
       "topics": [
         "theory"
       ],
@@ -4957,6 +5460,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "fa81ef48bf2242a1c8ffa4cb14083b47bacc269637391226c132a0776cde10b8",
       "topics": [],
       "authors": [
         "James A Green"
@@ -4997,6 +5501,7 @@
       "discovered_at": "2026-11-18T14:46:53+00:00",
       "updated_at": "2026-11-18T14:46:53+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "5728c9588fae6865bf04aeddf36ed40680505d502b012fdf77413985973317df",
       "topics": [
         "disputes"
       ],
@@ -5028,6 +5533,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "3dcdc121f516ec101dcf397eb3fabcce6ba300dfb1ed1cebdec91a6504d71c2c",
       "topics": [],
       "authors": [
         "Michal Saliternik",
@@ -5069,6 +5575,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "72cde35eecf775c9f74c6febf7ae3da45c67a0288224ad4a04ae1c0fe39e0f76",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -5098,6 +5605,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "18a72f4910a936569d4af2d54868e33c1c399ba7918be07afbf86777e0f9c701",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -5127,6 +5635,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "c95036891cb7ce6f072af18fd472e0aab49893b627da51f8e043ef1a961d264d",
       "topics": [],
       "authors": [
         "Luis Eslava"
@@ -5167,6 +5676,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "0d2bd01ac83b640e6425e082513dd590e8e365a101172345e331b3393c17e123",
       "topics": [
         "disputes"
       ],
@@ -5198,6 +5708,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "d72d3ecaec710d75940c830cced62f3eee5a12f400740daad4dc53537ded3ab7",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -5229,6 +5740,7 @@
       "discovered_at": "2026-11-18T14:46:50+00:00",
       "updated_at": "2026-11-18T14:46:50+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "aa5a26112f3da55e14485e68a77bb2a8117f6beb518f566fa6ec906cbe9cd876",
       "topics": [
         "rights"
       ],
@@ -5262,6 +5774,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "f4349a9b4577f5c76cb42da063a3e8f898e4bb5221b5edefd1038de4e8cf3db2",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -5293,6 +5806,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "5f7d266fbe87211c81285c0afe9af59ecaaa86f8464a9ae64ef0e5254398e236",
       "topics": [
         "disputes"
       ],
@@ -5324,6 +5838,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "52404407348aef8643ae3c640c4f1a57e383688710a2e2920583235cadf674d8",
       "topics": [],
       "authors": [],
       "bibliography": {
@@ -5362,6 +5877,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "fc4509d5b8d0bd559e21b4534a01c86466f70704c7a62556669f3b214375e50e",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -5393,6 +5909,7 @@
       "discovered_at": "2026-11-18T14:46:50+00:00",
       "updated_at": "2026-11-18T14:46:50+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "54c86b15e49b7d793e1447737c4efe17ada2494eacec8f904ceaf6b3908752f2",
       "topics": [
         "institutions"
       ],
@@ -5426,6 +5943,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "e43eb0910458d4c90a508f2fd8041e5272163a9bdc36bf21f5679b0fa3c97d7c",
       "topics": [],
       "authors": [
         "Thomas Spijkerboer"
@@ -5466,6 +5984,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "96d21c3b526811037e6f0462338037e1afd0408f54440aa494df0ec65b7d6b4e",
       "topics": [],
       "authors": [
         "Ramona Vijeyarasa"
@@ -5506,6 +6025,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "2c6463bae8e159f83cc240701ec8f9f3aa904bc2b5cc79316ad66861f0568f5d",
       "topics": [],
       "authors": [
         "Michael Karayanni"
@@ -5546,6 +6066,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "f118f491140b084cb56b7fbee53a6742c3de642fc05222907c6b512b64bea957",
       "topics": [
         "disputes"
       ],
@@ -5577,6 +6098,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "fb39f4fefab9536a04ffe5f5b1462ad2c063687ffe45eea692562de7cc13e750",
       "topics": [],
       "authors": [
         "Juan He"
@@ -5617,6 +6139,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "f021fbbff9be7302fe32a1eb59264d6a287a057666efe24a2e6106d2b17ee4eb",
       "topics": [
         "rights"
       ],
@@ -5648,6 +6171,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "730a554a02b2982c0793e60cd58881e22a197c73e5219c3cbb66e33b2364fa21",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -5677,6 +6201,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "b84b9ef76e52fb774e85bb05678eb8291d6561eea502e03337ff7ce08614a589",
       "topics": [
         "disputes"
       ],
@@ -5708,6 +6233,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "3a97b6359eab1fd7f25455f3ebad77d7efcf104cb98ca2bca16467cb51e4f056",
       "topics": [
         "disputes"
       ],
@@ -5739,6 +6265,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "023a79178305ef11315545b36cd14128b5019a52f6dfec58cc755de4bb93fd77",
       "topics": [
         "rights"
       ],
@@ -5781,6 +6308,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "f31ff62b19129378ee85d34ac42fd83e6f13a8137f3a0344379a3893b48a0be3",
       "topics": [
         "disputes"
       ],
@@ -5823,6 +6351,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "888689cb579b5e0dd5a22aac27985367f84b068aa702c9cf07100aeaf1df185f",
       "topics": [
         "rights"
       ],
@@ -5866,6 +6395,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "6ca43c93d46577f935620dbf1f58dd8e611e1cfc3326c6cabf25caf86bcca753",
       "topics": [
         "theory"
       ],
@@ -5908,6 +6438,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "a6e2e8c1702177ea35f0c60e9b237b94e66c952de05528d847bd42b92336ee74",
       "topics": [
         "economic"
       ],
@@ -5951,6 +6482,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "d7a50b2088d8404336e66e88a15f52eb57e5241508843b64a2a433e2c88c78cc",
       "topics": [
         "ocean-climate",
         "economic"
@@ -5994,6 +6526,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "0fba16d98d615c3d0e6a71942b0aedfc070e06781de41a344cc6f17c1f39adea",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -6025,6 +6558,7 @@
       "discovered_at": "2026-11-18T14:46:50+00:00",
       "updated_at": "2026-11-18T14:46:50+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "6986053f64d2ee101fdf1ff616b08cef8693e2e167ce7b53f890aa9620431712",
       "topics": [
         "rights"
       ],
@@ -6058,6 +6592,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "f1ad3a5e46e685e5210b496fffa816441fd11c2bfaf5517296db8cf40d79fd5a",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -6087,6 +6622,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "353c695aed494f27ad0abc864e73e767eb0adfde2b9b57b86a2f72c68ba6dcf8",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -6116,6 +6652,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "fe430df44cd8e2689bcfbf9b8fb75ed74a90e1593aa5ca28d4be0f8bec5a08c0",
       "topics": [],
       "authors": [
         "Xue Feng",
@@ -6157,6 +6694,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "c444745ce2f6183b9afa4647cd4f2eeee5af786b7a4936b6ada03d0d9f6f2cb9",
       "topics": [
         "institutions"
       ],
@@ -6197,6 +6735,7 @@
       "discovered_at": "2026-11-18T10:16:10+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "1ab1c28aafd6c6e146581b2dd0c1b393e447549aeb5ecfd3c53e714ebf239eef",
       "topics": [],
       "authors": [
         "Marios Tokas"
@@ -6237,6 +6776,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "bdc7c07bc6f2ca3006f215170a77ebb752f39ee9bc06f5125e1bfc9ab61b41e4",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -6268,6 +6808,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "e578ccd67d8b3d9b36b2ba301772c6f012f8183624a00fa53675b31280ee2ec1",
       "topics": [
         "disputes"
       ],
@@ -6299,6 +6840,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "4c615dbd6766ca7d23e316dca1239a7019a92a86d9ba56f840180358acd8c4ff",
       "topics": [
         "disputes"
       ],
@@ -6330,6 +6872,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "e1c5014a17336cd2cb3bb015fd502c049279e3a14396f00106a53aeb6492df6a",
       "topics": [
         "rights"
       ],
@@ -6361,6 +6904,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "e0362241e8d89731f7202e94d16fbecc88653ab0b0bc676852180ce229e777ba",
       "topics": [
         "disputes"
       ],
@@ -6392,6 +6936,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "f470785729d7ded3b62a9fd68ea79b6d8edaaece67b6193e7f2a48a5623252ec",
       "topics": [],
       "authors": [
         "Monica Garcia-Salmones Rovira"
@@ -6432,6 +6977,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "4be14704c83c749c8fb5ee0726f9271359130f6ae4611b5c3551a87ebbbb53ad",
       "topics": [],
       "authors": [
         "Ben Chester Cheong"
@@ -6472,6 +7018,7 @@
       "discovered_at": "2026-11-18T14:46:50+00:00",
       "updated_at": "2026-11-18T14:46:50+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "263540113b4f8b3a3c8c7c0c0c5c6d8f0749d026e6813f582778c6d8939e6d44",
       "topics": [
         "institutions"
       ],
@@ -6505,6 +7052,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "6e54dc1e212ee1268e50b5b89b8136372d512ea50f9cd2c85ba9e8bedc42c1ee",
       "topics": [],
       "authors": [
         "Cait Storr"
@@ -6545,6 +7093,7 @@
       "discovered_at": "2026-11-18T14:46:50+00:00",
       "updated_at": "2026-11-18T14:46:50+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "7b90e8aa584dda095c3751deb195232f17f61474af4f9194bb4415aa27ddad9d",
       "topics": [
         "rights"
       ],
@@ -6578,6 +7127,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "0d998aaa26f193ca9fefd7d2ad9a568e1816e0761768e3538e25d9f0f51e51a1",
       "topics": [],
       "authors": [
         "Didac Amat"
@@ -6618,6 +7168,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "bb7d84d38186157204001a9f753acd025b9b0a5f15c15f18b0ad8b4b5605c260",
       "topics": [],
       "authors": [],
       "bibliography": {
@@ -6656,6 +7207,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "cf52a10b05c17e45efbec7229fdccfd82fe41551ea791cb5dd39296ffa0f3d18",
       "topics": [
         "rights"
       ],
@@ -6698,6 +7250,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "03532b1a9161c89dae1a67869b94ad397bb1d332849e695aab4dd8f3ba129310",
       "topics": [
         "disputes",
         "theory"
@@ -6741,6 +7294,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "66e4f58efbcfe4a6db4b90d5e21ff0ce0ed27591d17b0840288faf5a5a30df8b",
       "topics": [
         "rights"
       ],
@@ -6783,6 +7337,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "fd2bb5b9909c0ef5f0cd064526de34f62ac28cea2777f6e87cf0de2e9f81b30c",
       "topics": [
         "disputes"
       ],
@@ -6814,6 +7369,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "e993630ddc63bd7d644afc91a3d7b9b028f39f898670e73902e89d7fb9734d9c",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -6845,6 +7401,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "c4e919ede389ae6e8edc0327f7d38d7d441821ac42f443789c4b6b6ecb56ba99",
       "topics": [
         "disputes"
       ],
@@ -6876,6 +7433,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "b82151426fa85fa934c883f248892923c725572e2d23bc2efb2325733bace0d7",
       "topics": [
         "disputes"
       ],
@@ -6907,6 +7465,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "906241ec426e5f688ad8f88b52903ecb36c9d705fce32e35d3a357b3058669d1",
       "topics": [
         "disputes",
         "economic"
@@ -6950,6 +7509,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "ccb27c2bead68fe4fb00dc8b1a690f18225683a8663e8cf6ce8374bf12789de1",
       "topics": [],
       "authors": [
         "Vasuki Nesiah"
@@ -6990,6 +7550,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "4841b60479b997b063e253a65a23c00138b85a6c6c0a766de27059f2e0bb4e3b",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -7021,6 +7582,7 @@
       "discovered_at": "2026-11-18T10:16:12+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "d0d9001c6bcc24c42f7ff13618f67ead174f80b0b5e5f26b484396fd59602bc5",
       "topics": [
         "institutions"
       ],
@@ -7063,6 +7625,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "7065102bb957050d978fc78ed2df0372ba752737f972a92090ccca525b303bd7",
       "topics": [
         "rights"
       ],
@@ -7094,6 +7657,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "babcb88a7b08f5dba3faf6534db3ded0dc94260c56c0afa8517e53e3c7c4b5c0",
       "topics": [
         "disputes"
       ],
@@ -7125,6 +7689,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "8f6bbdbfcfc1fa8887ca34aae335c1c3d1b9af12699346e49559c1dabca21597",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -7154,6 +7719,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "63d1392b1e3383f2f59f55145e11153bdfd5718abfdfd23d332dc050becc1fc7",
       "topics": [
         "disputes",
         "institutions"
@@ -7186,6 +7752,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "2803ddbc59b9a7d60d26c9a05f3252b6d1b73dcd2c9c16290793209ac0db3159",
       "topics": [
         "disputes"
       ],
@@ -7217,6 +7784,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "18d635d0de955ec2088b385d3cf9d0242d8c7596caa23bb4e8919881bf124cce",
       "topics": [
         "disputes"
       ],
@@ -7248,6 +7816,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "cd852eb3d96827e33b39c3378705f5e68230aeef07e9a27c7a30b6d271305eee",
       "topics": [
         "disputes",
         "rights"
@@ -7280,6 +7849,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "63de3c1a37ddb8c3be1c33f5a3dfc580e9f3bf0b09e398c4414267877430f129",
       "topics": [
         "disputes",
         "rights"
@@ -7312,6 +7882,7 @@
       "discovered_at": "2026-11-18T14:46:50+00:00",
       "updated_at": "2026-11-18T14:46:50+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "1077b0a3c25b518db703be997e2088bc9d97288815176b62ae4c8a04db58f9ef",
       "topics": [],
       "authors": [
         "ungeneva.org"
@@ -7343,6 +7914,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "b93925db2b852f9bc71ad2cdb22bcc060889416236564999707553950b81209a",
       "topics": [
         "disputes"
       ],
@@ -7374,6 +7946,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "3148f02a49b787f05bd7495ce98f53da09b0df284cd72ef207fd0755186f1600",
       "topics": [
         "disputes",
         "rights"
@@ -7406,6 +7979,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "39113203ed6aa9f87968d9e2af50988688e70a312657ba59f2a857b01e8141ef",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -7437,6 +8011,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "556868451947da6fa9b2fd2ae40b5f2affd707b0579bf5c966497116fd7965f7",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -7466,6 +8041,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "3fdfc28c116ef7b6ba487a13b9464339887e50954360b1812a3053ca52557e52",
       "topics": [
         "disputes"
       ],
@@ -7497,6 +8073,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "0ad583bf837dcd9869c0357ca4d89491a6c60514ec12e164d3053586667c3d81",
       "topics": [
         "institutions"
       ],
@@ -7528,6 +8105,7 @@
       "discovered_at": "2026-11-18T14:46:50+00:00",
       "updated_at": "2026-11-18T14:46:50+00:00",
       "evidence_basis": "RSS 摘录",
+      "source_revision": "b11a47846ef0dbbc24720f12c2a36f1c3784e575518d046c2302bac756db0657",
       "topics": [
         "rights"
       ],
@@ -7561,6 +8139,7 @@
       "discovered_at": "2026-11-18T10:16:07+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "书目元数据",
+      "source_revision": "f328f86cef61d9fecff547e0fadaa43cb66a81e59730465abe17dbe0d2d05410",
       "topics": [
         "economic"
       ],
@@ -7604,6 +8183,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "08dcdbba4eff36492c43baeeaf9f3917b03e40a9650d4bb11edf0caf230aa649",
       "topics": [
         "disputes",
         "rights"
@@ -7636,6 +8216,7 @@
       "discovered_at": "2026-11-18T10:16:02+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "181dd940466e0a24f20de1287b5911c36ddf2315d5c36a7ba35e975733914b2c",
       "topics": [],
       "authors": [
         "Walter Ilardi"
@@ -7667,6 +8248,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "6e7ec627c1c6f537a1c8267526f9a3555dba78b6b689d8e540aaac2cd0730e05",
       "topics": [
         "disputes",
         "rights"
@@ -7699,6 +8281,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "d913b4a81b3d0517f4cf4b3e21cb79ae9b43cac3c93891d4a3601df642acbf9d",
       "topics": [
         "disputes",
         "rights"
@@ -7731,6 +8314,7 @@
       "discovered_at": "2026-11-18T10:19:01+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "官方目录标题",
+      "source_revision": "a193b3215deb541d1a52cd47bbe8a4fdd6513b37d67a9761b5d55f37e44e14bd",
       "topics": [
         "disputes"
       ],
@@ -7762,6 +8346,7 @@
       "discovered_at": "2026-11-18T10:15:59+00:00",
       "updated_at": "2026-11-18T10:23:44+00:00",
       "evidence_basis": "RSS 标题",
+      "source_revision": "0882024af9191ae23578db3b2a5fc796eeb42462966a64f9938e6db4d1e55f45",
       "topics": [],
       "authors": [],
       "bibliography": {},
@@ -7793,12 +8378,13 @@
       "poll_hours": 6,
       "scope": "官方新闻目录标题、日期及原文链接；机构报道不等于司法认定，不抓取新闻全文",
       "language": "en",
-      "status": "error",
-      "attempted_at": "2026-11-18T14:46:48+00:00",
-      "success_at": null,
-      "error": "没有解析到条目；请检查信源结构，未覆盖旧数据",
-      "item_count": 6,
-      "next_attempt_at": "2026-11-18T15:01:48+00:00"
+      "status": "ok",
+      "attempted_at": "2026-11-18T15:13:23+00:00",
+      "success_at": "2026-11-18T15:13:23+00:00",
+      "error": null,
+      "consecutive_failures": 0,
+      "item_count": 7,
+      "next_attempt_at": null
     },
     {
       "id": "un-geneva-press",
@@ -7812,10 +8398,12 @@
       "poll_hours": 6,
       "scope": "官方 RSS 新闻发布入口；保留报道来源，不将其作为裁判结论",
       "language": "en",
+      "feed_url": "https://www.ungeneva.org/news-media/press-releases-list/rss.xml",
       "status": "ok",
       "attempted_at": "2026-11-18T14:46:50+00:00",
       "success_at": "2026-11-18T14:46:50+00:00",
       "error": null,
+      "consecutive_failures": 0,
       "item_count": 10,
       "next_attempt_at": null
     },
@@ -7831,10 +8419,12 @@
       "poll_hours": 6,
       "scope": "官方 RSS 会议报道入口；区别于学术活动及正式会议文件",
       "language": "en",
+      "feed_url": "https://www.ungeneva.org/news-media/meeting-summaries-list/rss.xml",
       "status": "ok",
       "attempted_at": "2026-11-18T14:46:51+00:00",
       "success_at": "2026-11-18T14:46:51+00:00",
       "error": null,
+      "consecutive_failures": 0,
       "item_count": 10,
       "next_attempt_at": null
     },
@@ -7850,12 +8440,14 @@
       "poll_hours": 6,
       "scope": "RSS 最新条目，标题与链接；不代表期刊论文全覆盖",
       "language": "en",
-      "status": "error",
-      "attempted_at": "2026-11-18T14:46:52+00:00",
-      "success_at": null,
-      "error": "not well-formed (invalid token): line 1, column 119",
-      "item_count": 0,
-      "next_attempt_at": "2026-11-18T15:01:52+00:00"
+      "feed_url": "https://www.ejiltalk.org/feed/",
+      "status": "ok",
+      "attempted_at": "2026-11-18T15:13:25+00:00",
+      "success_at": "2026-11-18T15:13:25+00:00",
+      "error": null,
+      "consecutive_failures": 0,
+      "item_count": 10,
+      "next_attempt_at": null
     },
     {
       "id": "opiniojuris",
@@ -7869,10 +8461,12 @@
       "poll_hours": 6,
       "scope": "RSS 最新条目，包含学术评论与活动公告",
       "language": "en",
+      "feed_url": "https://opiniojuris.org/feed/",
       "status": "ok",
       "attempted_at": "2026-11-18T10:18:54+00:00",
       "success_at": "2026-11-18T10:18:54+00:00",
       "error": null,
+      "consecutive_failures": 0,
       "item_count": 15,
       "next_attempt_at": null
     },
@@ -7888,10 +8482,12 @@
       "poll_hours": 6,
       "scope": "RSS 最新条目；多语种学术评论",
       "language": "mixed",
+      "feed_url": "https://voelkerrechtsblog.org/feed/",
       "status": "ok",
       "attempted_at": "2026-11-18T10:18:56+00:00",
       "success_at": "2026-11-18T10:18:56+00:00",
       "error": null,
+      "consecutive_failures": 0,
       "item_count": 30,
       "next_attempt_at": null
     },
@@ -7907,10 +8503,12 @@
       "poll_hours": 12,
       "scope": "学会 RSS 公告；当前描述字段含重复过期模板，仅使用标题，明确日期后才进入日历",
       "language": "en",
+      "feed_url": "https://esil-sedi.eu/feed/",
       "status": "ok",
       "attempted_at": "2026-11-18T10:18:58+00:00",
       "success_at": "2026-11-18T10:18:58+00:00",
       "error": null,
+      "consecutive_failures": 0,
       "item_count": 30,
       "next_attempt_at": null
     },
@@ -7926,10 +8524,12 @@
       "poll_hours": 6,
       "scope": "WTO 官方新闻，并非全部 WTO 文件或争端记录",
       "language": "en",
+      "feed_url": "https://www.wto.org/library/rss/latest_news_e.xml",
       "status": "ok",
       "attempted_at": "2026-11-18T10:18:59+00:00",
       "success_at": "2026-11-18T10:18:59+00:00",
       "error": null,
+      "consecutive_failures": 0,
       "item_count": 10,
       "next_attempt_at": null
     },
@@ -7949,6 +8549,7 @@
       "attempted_at": "2026-11-18T14:46:53+00:00",
       "success_at": "2026-11-18T14:46:53+00:00",
       "error": null,
+      "consecutive_failures": 0,
       "item_count": 10,
       "next_attempt_at": null
     },
@@ -7968,6 +8569,7 @@
       "attempted_at": "2026-11-18T10:19:01+00:00",
       "success_at": "2026-11-18T10:19:01+00:00",
       "error": null,
+      "consecutive_failures": 0,
       "item_count": 30,
       "next_attempt_at": null
     },
@@ -7987,6 +8589,7 @@
       "attempted_at": "2026-11-18T10:19:03+00:00",
       "success_at": "2026-11-18T10:19:03+00:00",
       "error": null,
+      "consecutive_failures": 0,
       "item_count": 24,
       "next_attempt_at": null
     },
@@ -8006,6 +8609,7 @@
       "attempted_at": "2026-11-18T10:19:04+00:00",
       "success_at": "2026-11-18T10:19:04+00:00",
       "error": null,
+      "consecutive_failures": 0,
       "item_count": 24,
       "next_attempt_at": null
     },
@@ -8025,6 +8629,7 @@
       "attempted_at": "2026-11-18T10:19:07+00:00",
       "success_at": "2026-11-18T10:19:07+00:00",
       "error": null,
+      "consecutive_failures": 0,
       "item_count": 24,
       "next_attempt_at": null
     },
@@ -8044,6 +8649,7 @@
       "attempted_at": null,
       "success_at": null,
       "error": null,
+      "consecutive_failures": 0,
       "item_count": 0,
       "next_attempt_at": null
     },
@@ -8063,6 +8669,7 @@
       "attempted_at": null,
       "success_at": null,
       "error": null,
+      "consecutive_failures": 0,
       "item_count": 0,
       "next_attempt_at": null
     }
@@ -8886,22 +9493,32 @@
         "topics": []
       }
     ],
-    "updated_at": "2026-11-18T14:50:49+00:00",
+    "updated_at": "2026-11-18T15:13:25+00:00",
     "coverage_note": "人工建立的期刊入口目录 + 程序定期检查 + 已接通信源中的征稿线索。目录不是排名，不等于已覆盖各刊全部征稿；主页可读也不等于当前正在收稿。"
   },
   "operations": {
     "last_run": {
       "id": 1,
-      "started_at": "2026-11-18T14:50:49+00:00",
-      "finished_at": "2026-11-18T14:50:49+00:00",
-      "successes": 0,
+      "started_at": "2026-11-18T15:13:22+00:00",
+      "finished_at": "2026-11-18T15:13:25+00:00",
+      "successes": 2,
       "failures": 0,
-      "added": 0,
-      "changed": 0
+      "added": 11,
+      "changed": 6
     },
-    "scheduler_enabled": false,
-    "scheduler_note": "最近一次云端运行：2026-11-18T14:50:49+00:00；触发方式：push。信源成功时间单独显示。",
-    "total_archived": 223,
-    "visible_in_export": 223
+    "scheduler_enabled": true,
+    "scheduled_run_verified": false,
+    "last_effective_run": {
+      "id": 1,
+      "started_at": "2026-11-18T15:13:22+00:00",
+      "finished_at": "2026-11-18T15:13:25+00:00",
+      "successes": 2,
+      "failures": 0,
+      "added": 11,
+      "changed": 6
+    },
+    "scheduler_note": "最近一次云端运行：2026-11-18T15:13:25+00:00；触发方式：push。信源成功时间单独显示。",
+    "total_archived": 234,
+    "visible_in_export": 234
   }
 }
