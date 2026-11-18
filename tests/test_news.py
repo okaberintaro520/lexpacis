@@ -24,6 +24,15 @@ class NewsTests(unittest.TestCase):
         markup=f'<time>17 November 2026</time><a href="{self.url}">A sufficiently long original news headline</a><a href="{self.url}">Read more</a>'
         rows=core.parse_listing(markup.encode(),self.source)
         self.assertEqual(len(rows),1);self.assertEqual(rows[0]['date_precision'],'unknown')
+    def test_drupal_news_row_date_follows_nested_image(self):
+        markup=(f'<article class="node"><div class="views-row row-1">'
+                '<article class="un-news-image"><img alt=""></article>'
+                f'<h2><a href="{self.url}">A sufficiently long first news headline</a></h2>'
+                '<time>17 November 2026</time></div>'
+                f'<div class="views-row row-2"><a href="{self.url}-2">A sufficiently long second news headline</a>'
+                '<time>18 November 2026</time></div></article>')
+        rows=core.parse_listing(markup.encode(),self.source)
+        self.assertEqual([r['published_at'] for r in rows],['2026-11-17','2026-11-18'])
     def test_institutional_workshop_report_stays_news(self):
         self.assertEqual(core.classify('UN workshop reports on civilian protection',self.source,self.config)[0],'news')
     def test_import_is_idempotent_and_not_fetch_success(self):

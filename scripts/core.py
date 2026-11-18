@@ -230,24 +230,31 @@ def parse_news_listing(data,source):
     """Use isolated article cards for dates; otherwise retain undated title/link metadata."""
     markup=data.decode('utf-8',errors='replace')
     pattern=re.compile(r'/en/news-media/news/\d{4}/\d{2}/\d+/[^/?#]+')
-    blocks=re.findall(r'<article\b[^>]*>(.*?)</article>',markup,re.S|re.I)
-    if not blocks:blocks=[markup]
+    # Drupal uses an outer article and separate image articles inside each news row.
+    # Splitting on article tags alone stops the first record at its image.
+    rows=re.split(r'<div\b[^>]*\bclass=["\'][^"\']*\bviews-row\b[^"\']*["\'][^>]*>',markup,flags=re.I)[1:]
+    cards=rows or re.findall(r'<article\b[^>]*>(.*?)</article>',markup,re.S|re.I)
+    blocks=cards or [markup]
     entries=[];seen=set()
     for block in blocks:
         parser=LinkParser();parser.feed(block)
-        matching=[link for link in parser.links if pattern.search(urllib.parse.urlsplit(safe_url(link['href'],source['url'])).path) and len(link['title'])>25 and not re.search(r'^read more$',link['title'],re.I)]
-        for link in matching:
+        matching={}
+        for link in parser.links:
             url=safe_url(link['href'],source['url'])
+            target=urllib.parse.urlsplit(url)
+            if target.hostname==urllib.parse.urlsplit(source['url']).hostname and pattern.fullmatch(target.path) and len(link['title'])>25:
+                matching.setdefault(url,link['title'])
+        for url,title in matching.items():
             if url in seen:continue
             seen.add(url)
             date,precision=None,'unknown'
             # A page-wide date must never be attached to every headline.
-            if len(blocks)>1 or re.search(r'<article\b',markup,re.I):
+            if cards and len(matching)==1:
                 values=re.findall(r'<time\b[^>]*>(.*?)</time>',block,re.S|re.I)
                 parsed=[parse_date(plain(value)) for value in values]
                 distinct={(d,p) for d,p in parsed if d}
                 if len(distinct)==1:date,precision=distinct.pop()
-            entries.append({'title':link['title'],'url':url,'published_at':date,'date_precision':precision,
+            entries.append({'title':title,'url':url,'published_at':date,'date_precision':precision,
                             'authors':[],'doi':'','evidence':'','evidence_basis':'官方新闻目录元数据'})
     return entries
 
