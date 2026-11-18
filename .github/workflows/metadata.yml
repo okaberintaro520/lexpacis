@@ -1,49 +1,20 @@
-name: Lexpacis 云端采集与发布
+name: Lexpacis 旧入口迁址提示
 on:
   push:
     branches: [main]
     paths:
+      - 'legacy-site/**'
       - '.github/workflows/metadata.yml'
-      - 'config/**'
-      - 'scripts/**'
-      - 'web/**'
-      - 'dist/data.json'
   workflow_dispatch:
 permissions:
   contents: read
 concurrency:
-  group: lexatlas-production
+  group: lexpacis-legacy-pages
   cancel-in-progress: false
 jobs:
-  build:
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-24.04
-    timeout-minutes: 15
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # official v6, checked 2026-11-18
-        with:
-          persist-credentials: false
-      - name: Check supported runtime
-        run: python3 -c 'import sys; assert sys.version_info >= (3,10)'
-      - name: Verify pipeline and public artifacts
-        run: python3 -m unittest discover -s tests -q
-      - name: Collect and build without any model
-        run: python3 scripts/cloud.py run
-      - name: Preserve only public metadata for the next run
-        run: python3 scripts/cloud.py commit
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-      - name: Upload public website artifact
-        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # official v4
-        with:
-          path: dist
-          retention-days: 1
   deploy:
-    needs: build
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 8
     permissions:
       pages: write
       id-token: write
@@ -51,6 +22,12 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy public static artifact
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b
+        with:
+          path: legacy-site
+          retention-days: 1
+      - uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e
         id: deployment
-        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # official v4, checked 2026-11-18
