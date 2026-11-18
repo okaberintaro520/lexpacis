@@ -226,6 +226,7 @@ def public_data(conn,config,sources):
     for row in rows:
         if not visible(row,sources,rules): continue
         item={k:row[k] for k in ('id','source_id','title','url','doi','module','published_at','date_precision','discovered_at','updated_at','evidence_basis')}
+        item['source_revision']=row['content_hash']
         item.update(topics=json.loads(row['topics']),authors=json.loads(row['authors']),bibliography=json.loads(row['bibliography']))
         item['material_type']={'wto':'官方新闻','icj':'官方新闻稿索引','pca':'机构公告索引','esil':'学会公告'}.get(row['source_id'],
                               '书目元数据' if row['source_id'].startswith('crossref-') else '官方机构新闻报道' if next((s.get('authority') for s in sources if s['id']==row['source_id']),None)=='official_news_service' else '学术平台文章')
@@ -242,10 +243,12 @@ def public_data(conn,config,sources):
     for source in sources:
         state=conn.execute('SELECT * FROM source_state WHERE id=?',(source['id'],)).fetchone()
         info={key:source.get(key) for key in ('id','name','organization','homepage','kind','module','authority','enabled','poll_hours','scope','language')}
+        if source['kind']=='rss':info['feed_url']=source['url']
         info.update(status=state['status'] if state else ('unverified' if source['enabled'] else 'candidate'),
                     attempted_at=state['attempted_at'] if state else None,
                     success_at=state['success_at'] if state else None,
                     error=state['error'] if state else None,
+                    consecutive_failures=state['failures'] if state else 0,
                     item_count=sum(1 for x in items if x['source_id']==source['id']),
                     next_attempt_at=state['next_attempt_at'] if state else None)
         source_info.append(info)
@@ -257,7 +260,9 @@ def public_data(conn,config,sources):
             'topics':[{k:t[k] for k in ('id','name','short')} for t in config['topics']],
             'modules':config['modules'],'items':items[:config['max_public_items']],
             'sources':source_info,'cfp':cfp_public_data(conn,items),'operations':{'last_run':dict(last_run) if last_run else None,
-            'scheduler_enabled':cloud_run and cloud.get('event')=='schedule',
+            'scheduler_enabled':bool(cloud_run),
+            'scheduled_run_verified':bool(cloud_run and (cloud.get('event')=='schedule' or cloud.get('scheduled_run_verified'))),
+            'last_effective_run':(dict(last_run) if last_run and (last_run['successes'] or last_run['failures']) else cloud.get('previous_effective_run')),
             'scheduler_note':('最近一次云端运行：'+cloud['last_cloud_run']+'；触发方式：'+cloud.get('event','unknown')+'。信源成功时间单独显示。') if cloud_run else '云端定时流程已准备；尚未连接账户或验证实际定时运行。',
             'total_archived':len(items),'visible_in_export':min(len(items),config['max_public_items'])}}
 

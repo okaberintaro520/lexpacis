@@ -1,9 +1,9 @@
 {
   "name": "法域前沿",
-  "english_name": "LexAtlas",
+  "english_name": "Lexpacis",
   "tagline": "追踪国际法，连接研究的下一步。",
   "description": "面向高校师生与研究者的国际法学术资讯与原始资料索引。",
-  "base_url": "https://lexatlas-law-observatory.dependablebench4.chatgpt.site",
+  "base_url": "https://okaberintaro520.github.io/lexpacis",
   "timezone": "Asia/Shanghai",
   "ai_batch_size": 12,
   "ai_daily_limit": 24,
@@ -11,7 +11,7 @@
   "max_public_items": 5000,
   "fetch_timeout_seconds": 20,
   "max_fetch_bytes": 6000000,
-  "user_agent": "LexAtlas/1.0 (academic metadata reader; low-frequency polling)",
+  "user_agent": "Lexpacis/1.2 (academic metadata reader; low-frequency polling)",
   "deploy": {
     "provider": "none",
     "cloudflare_project": "",

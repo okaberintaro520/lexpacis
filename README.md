@@ -1,8 +1,10 @@
-# 法域前沿 · LexAtlas
+# 法域前沿 · Lexpacis
 
 面向高校师生与研究者的国际法资讯工作台。**初期开发完成后，日常运营可以完全脱离 Codex，由 WorkBuddy 和其他模型接手。**
 
-当前为可运行的 1.1 版：静态网页 + Python 标准库采集/存储/发布程序 + 模型无关的文件交接协议。没有模型 API 客户端，不自动购买任何服务。
+当前版本为 1.2。网站由静态网页、Python 标准库采集程序和 GitHub Actions 工作流组成。翻译与内容整理可使用独立的文件交接流程。
+
+日常阅读、改名、更新检查、备份、回滚及 WorkBuddy 操作见 [使用与运营手册](docs/LEXPACIS_MANUAL.md)。
 
 GitHub 云端已完成一次真实采集和公开发布。每天北京时间约 09:17、18:17 尝试刷新基础资料，运行不依赖站主电脑。WorkBuddy 可从现有源码接手，按需补充中文整理。见 [云端部署说明](docs/CLOUD_START_HERE.md) 与 [公开站点](https://okaberintaro520.github.io/lexpacis/)。
 

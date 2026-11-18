@@ -1,4 +1,4 @@
-name: LexAtlas cloud metadata
+name: Lexpacis 云端采集与发布
 on:
   push:
     branches: [main]
@@ -7,6 +7,7 @@ on:
       - 'config/**'
       - 'scripts/**'
       - 'web/**'
+      - 'dist/data.json'
   workflow_dispatch:
   schedule:
     # UTC 01:17 / 10:17 = Asia/Shanghai 09:17 / 18:17; avoid the hour boundary.
@@ -29,6 +30,8 @@ jobs:
           persist-credentials: false
       - name: Check supported runtime
         run: python3 -c 'import sys; assert sys.version_info >= (3,10)'
+      - name: Verify pipeline and public artifacts
+        run: python3 -m unittest discover -s tests -q
       - name: Collect and build without any model
         run: python3 scripts/cloud.py run
       - name: Preserve only public metadata for the next run

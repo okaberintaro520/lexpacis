@@ -12,6 +12,22 @@
   const fresh=()=>({type:'article-journal',language:'en',author:[],title:''});
   let draft=fresh(), notes=[], style='chinese-law', start=1, locator='', label='page', preview='', onToast=()=>{};
   let host,lookupController=null;
+  let engineLoad;
+  function loadEngine(){
+    if(window.CSL&&window.LEXATLAS_CSL)return Promise.resolve();
+    if(engineLoad)return engineLoad;
+    const files=[];
+    if(!window.CSL)files.push('vendor/citeproc.js');
+    if(!window.LEXATLAS_CSL)files.push('vendor/citation-styles.js');
+    engineLoad=Promise.all(files.map(source=>new Promise((resolve,reject)=>{
+      const script=document.createElement('script');script.src=source;
+      script.onload=resolve;script.onerror=()=>{script.remove();reject(Error('本地引注组件未加载。请重新打开此页。'));};
+      document.head.append(script);
+    }))).then(()=>{
+      if(!window.CSL||!window.LEXATLAS_CSL)throw Error('本地引注组件未能初始化。');
+    }).catch(error=>{engineLoad=null;throw error;});
+    return engineLoad;
+  }
   try{const stored=JSON.parse(localStorage.getItem('lexatlas.citations.v1')||'null');if(stored&&Array.isArray(stored.notes)){notes=stored.notes.slice(0,80).map(n=>({record:cleanRecord(n.record),locator:String(n.locator||'').slice(0,100),label:['page','paragraph','section','chapter','article'].includes(n.label)?n.label:'page'}));if(styles[stored.style])style=stored.style;}}catch{/* Corrupt or unavailable local storage does not block reading. */}
   function text(v,max=4000){if(typeof v!=='string'&&typeof v!=='number')return '';const doc=new DOMParser().parseFromString(String(v),'text/html');return (doc.body.textContent||'').replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g,'').trim().slice(0,max);}
   function cleanRecord(raw){
@@ -21,7 +37,7 @@
     for(const role of ['author','editor','translator'])if(Array.isArray(raw[role]))out[role]=raw[role].slice(0,80).map(p=>{if(!p||typeof p!=='object')return {literal:''};const n={};for(const k of ['family','given','literal','suffix','non-dropping-particle'])if(p[k])n[k]=text(p[k],300);return n;}).filter(n=>n.family||n.literal||n.given);
     for(const key of ['issued','accessed']){
       const parts=raw[key]?.['date-parts']?.[0];
-      if(Array.isArray(parts)&&parts.length&&parts.length<=3&&parts.every(Number.isInteger)&&parts[0]>=1000&&parts[0]<=2999&&(!parts[1]||(parts[1]>=1&&parts[1]<=12))&&(!parts[2]||(parts[2]>=1&&parts[2]<=31)))out[key]={'date-parts':[parts.slice()]};
+      if(validDateParts(parts))out[key]={'date-parts':[parts.slice()]};
     }
     if(out.URL&&!/^https?:\/\//i.test(out.URL))delete out.URL;
     if(!out.language)out.language=/[\u3400-\u9fff]/.test(out.title||'')?'zh-CN':'en';
@@ -38,7 +54,18 @@
   function names(v){return v.split(/[;；\n]/).map(s=>s.trim()).filter(Boolean).map(parseName);}
   function namesText(list){return (list||[]).map(n=>n.literal||[n.family,n.given].filter(Boolean).join(', ')).join('\n');}
   function dateText(value){return (value?.['date-parts']?.[0]||[]).map((n,i)=>i?String(n).padStart(2,'0'):n).join('-');}
-  function dateValue(value){if(!/^\d{4}(?:-\d{2})?(?:-\d{2})?$/.test(value))return undefined;return {'date-parts':[value.split('-').map(Number)]};}
+  function validDateParts(parts){
+    if(!Array.isArray(parts)||!parts.length||parts.length>3||!parts.every(Number.isInteger))return false;
+    const [year,month,day]=parts;
+    if(year<1000||year>2999)return false;
+    if(month!==undefined&&(month<1||month>12))return false;
+    return day===undefined||(day>=1&&day<=new Date(Date.UTC(year,month,0)).getUTCDate());
+  }
+  function dateValue(value){
+    if(!/^\d{4}(?:-\d{2})?(?:-\d{2})?$/.test(value))return undefined;
+    const parts=value.split('-').map(Number);
+    return validDateParts(parts)?{'date-parts':[parts]}:undefined;
+  }
   function sanitize(html){
     const doc=new DOMParser().parseFromString(html,'text/html');
     const allowed=new Set(['I','B','EM','STRONG','SPAN','SUP','SUB','SMALL','DIV']);
@@ -122,5 +149,5 @@
       else if(button.hasAttribute('data-import-all')){const records=importRecords();if(notes.length+records.length>80)throw Error('加入后超过 80 条，请先导出已有清单。');notes.push(...records.map(record=>({record,locator:'',label:'page'})));save();refresh();onToast('已导入 '+records.length+' 条书目。');}
     }catch(error){onToast(error.message);}};
   }
-  window.CitationWorkbench={render,mount(container,toast){host=container;onToast=toast||(()=>{});bind();refresh();},fromItem,setItem(item){draft=fromItem(item);locator='';},format,cleanRecord,parseRIS,styles,sanitize};
+  window.CitationWorkbench={render,loadEngine,mount(container,toast){host=container;onToast=toast||(()=>{});bind();refresh();},fromItem,setItem(item){draft=fromItem(item);locator='';},format,cleanRecord,parseRIS,styles,sanitize};
 })();

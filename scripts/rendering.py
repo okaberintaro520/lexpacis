@@ -10,16 +10,21 @@ import uuid
 import xml.etree.ElementTree as ET
 from core import ROOT, UTC, atomic_write, now, write_json
 
+CONTENT_POLICY="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://api.crossref.org; object-src 'none'; base-uri 'none'; form-action 'none'"
+
 def x(value): return html.escape(str(value or ''),quote=True)
 
-def rss(data,items):
+def security_meta():
+    return f'<meta http-equiv="Content-Security-Policy" content="{x(CONTENT_POLICY)}"><meta name="referrer" content="no-referrer">'
+
+def rss(data,items,label=None):
     root=ET.Element('rss',version='2.0'); channel=ET.SubElement(root,'channel')
     def element(parent,tag,value): ET.SubElement(parent,tag).text=str(value)
-    element(channel,'title',data['site']['name']+' · 国际法资讯')
+    element(channel,'title',data['site']['name']+' · '+(label or '国际法资讯'))
     element(channel,'link',data['site']['base_url'])
     element(channel,'description',data['site']['description'])
     element(channel,'language','zh-CN')
-    element(channel,'lastBuildDate',email.utils.format_datetime(dt.datetime.now(UTC)))
+    element(channel,'lastBuildDate',email.utils.format_datetime(dt.datetime.fromisoformat(data['generated_at'])))
     sources={s['id']:s for s in data['sources']}
     for item in items[:100]:
         node=ET.SubElement(channel,'item')
@@ -30,7 +35,8 @@ def rss(data,items):
         element(node,'description',description+' 来源：'+sources[item['source_id']]['name'])
         if item['published_at'] and item['date_precision']=='instant':
             element(node,'pubDate',email.utils.format_datetime(dt.datetime.fromisoformat(item['published_at'])))
-        element(node,'source',sources[item['source_id']]['name'])
+        source=sources[item['source_id']]
+        ET.SubElement(node,'source',url=source.get('feed_url') or source['homepage']).text=source['name']
     return ET.tostring(root,encoding='unicode',xml_declaration=True)
 
 def ics_escape(value):
@@ -48,7 +54,7 @@ def fold_line(line):
     return '\r\n'.join(result)
 
 def calendar(data):
-    lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//LexAtlas//Academic Calendar//ZH','CALSCALE:GREGORIAN','METHOD:PUBLISH','X-WR-CALNAME:'+ics_escape(data['site']['name']+'·学术日历')]
+    lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Lexpacis//Academic Calendar//ZH','CALSCALE:GREGORIAN','METHOD:PUBLISH','X-WR-CALNAME:'+ics_escape(data['site']['name']+'·学术日历')]
     stamp=dt.datetime.fromisoformat(data['generated_at']).astimezone(UTC).strftime('%Y%m%dT%H%M%SZ')
     for item in data['items']:
         for key in ('event','deadline'):
@@ -79,7 +85,7 @@ def detail_page(data,item):
     authors='、'.join(item['authors']) or '原文未提供作者'
     canonical=data['site']['base_url'].rstrip('/')+'/items/'+item['id']+'.html'
     name=x(data['site']['name']);english=x(data['site']['english_name']);mark=x((data['site']['english_name'] or data['site']['name'])[0])
-    return f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{x(title)} — {name}</title><meta name="description" content="{x(description[:160])}"><link rel="canonical" href="{x(canonical)}"><link rel="stylesheet" href="../styles.css"><link rel="icon" href="../favicon.svg"></head><body class="detail-document"><header class="document-header"><a class="brand" href="../index.html"><span class="brand-mark">{mark}<span>↗</span></span><span>{name}<small>{english}</small></span></a><a class="back-link" href="../index.html#/{item['module']}">← 返回{module}</a></header><main class="document-main"><div class="eyebrow">{x(module)} / {x(source['name'])}</div><h1>{x(title)}</h1>{f'<p class="original-title">{x(item["title"])}</p>' if item.get('title_zh') else ''}<div class="document-meta">{x(item['published_at'] or '原始发布日期未知')} · {x(authors)}</div><p class="basis-badge">{x(basis)}</p><p class="document-summary">{x(description)}</p><dl class="facts"><dt>专题</dt><dd>{x(topics)}</dd><dt>原始机构</dt><dd>{x(source['organization'])}</dd><dt>首次发现</dt><dd>{x(item['discovered_at'])}</dd><dt>资料依据</dt><dd>{x(item['evidence_basis'])}；本平台未核验全文</dd><dt>DOI</dt><dd>{x(item['doi'] or '未提供')}</dd></dl><div class="detail-actions"><a class="primary-button" href="{x(item['url'])}" target="_blank" rel="noopener noreferrer">访问原始来源 ↗</a><a class="secondary-button" href="../index.html#/cite?item={item['id']}">生成引注 ↗</a></div><p class="fine-print">学术索引与自动整理内容，不代表原机构立场。实质法律判断请核查原始文件和上下文。</p></main><footer class="document-footer">{name} · {x(data['site']['tagline'])}</footer></body></html>'''
+    return f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">{security_meta()}<meta name="viewport" content="width=device-width,initial-scale=1"><title>{x(title)} — {name}</title><meta name="description" content="{x(description[:160])}"><link rel="canonical" href="{x(canonical)}"><link rel="stylesheet" href="../styles.css"><link rel="icon" href="../favicon.svg"></head><body class="detail-document"><header class="document-header"><a class="brand" href="../index.html"><span class="brand-mark">{mark}<span>↗</span></span><span>{name}<small>{english}</small></span></a><a class="back-link" href="../index.html#/{item['module']}">← 返回{module}</a></header><main class="document-main"><div class="eyebrow">{x(module)} / {x(source['name'])}</div><h1>{x(title)}</h1>{f'<p class="original-title">{x(item["title"])}</p>' if item.get('title_zh') else ''}<div class="document-meta">{x(item['published_at'] or '原始发布日期未知')} · {x(authors)}</div><p class="basis-badge">{x(basis)}</p><p class="document-summary">{x(description)}</p><dl class="facts"><dt>专题</dt><dd>{x(topics)}</dd><dt>原始机构</dt><dd>{x(source['organization'])}</dd><dt>首次发现</dt><dd>{x(item['discovered_at'])}</dd><dt>资料依据</dt><dd>{x(item['evidence_basis'])}；本平台未核验全文</dd><dt>DOI</dt><dd>{x(item['doi'] or '未提供')}</dd></dl><div class="detail-actions"><a class="primary-button" href="{x(item['url'])}" target="_blank" rel="noopener noreferrer">访问原始来源 ↗</a><a class="secondary-button" href="../index.html#/cite?item={item['id']}">生成引注 ↗</a></div><p class="fine-print">学术索引与自动整理内容，不代表原机构立场。实质法律判断请核查原始文件和上下文。</p></main><footer class="document-footer">{name} · {x(data['site']['tagline'])}</footer></body></html>'''
 
 def safe_remove_release(path):
     path=Path(path).resolve()
@@ -98,6 +104,8 @@ def write_release(data):
         for html_file in stage.glob('*.html'):
             template=html_file.read_text(encoding='utf-8')
             for key,value in replacements.items():template=template.replace('{{'+key+'}}',x(value))
+            # Pages serves static files without applying _headers.
+            template=template.replace('<head>','<head>'+security_meta(),1)
             atomic_write(html_file,template)
         atomic_write(stage/'favicon.svg','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="13" fill="#243b43"/><text x="32" y="46" text-anchor="middle" font-size="42" fill="#f7f4ec" font-family="Georgia,serif">'+x(replacements['BRAND_MARK'])+'</text></svg>')
         # A JS data file also supports offline file:// previews without fetch/CORS.
@@ -112,7 +120,10 @@ def write_release(data):
         write_json(stage/'api/journals.json',data.get('cfp',{}).get('journals',[]))
         atomic_write(stage/'feed.xml',rss(data,data['items']))
         for topic in data['topics']:
-            atomic_write(stage/'feeds'/(topic['id']+'.xml'),rss(data,[i for i in data['items'] if topic['id'] in i['topics']]))
+            atomic_write(stage/'feeds'/(topic['id']+'.xml'),rss(data,[i for i in data['items'] if topic['id'] in i['topics']],topic['name']))
+        (stage/'feeds/modules').mkdir()
+        for module in data['modules']:
+            atomic_write(stage/'feeds/modules'/(module['id']+'.xml'),rss(data,[i for i in data['items'] if i['module']==module['id']],module['name']))
         atomic_write(stage/'calendar.ics',calendar(data))
         cfp_items=[]
         for call in data.get('cfp',{}).get('calls',[]):

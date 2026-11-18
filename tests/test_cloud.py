@@ -44,6 +44,24 @@ class CloudTests(unittest.TestCase):
             cloud.retain_translations(conn,self.snapshot,self.config,self.sources)
             self.assertIsNone(conn.execute('SELECT * FROM enrichments WHERE item_id=?',(translated['id'],)).fetchone())
         finally:conn.close()
+    def test_validated_date_survives_a_skipped_fetch_but_not_a_changed_revision(self):
+        item=next(item for item in self.snapshot['items'] if item['module']=='events' and item.get('title_zh'))
+        item['source_revision']='a'*64
+        item['event']={'date':'2027-02-14','date_text':'14 February 2027','label':'活动日'}
+        item['summary_zh']='经上一发布版本整理的活动介绍。'
+        conn=core.database(self.root)
+        try:
+            cloud.restore_snapshot(conn,self.snapshot,self.config,self.sources)
+            cloud.retain_translations(conn,self.snapshot,self.config,self.sources)
+            current=next(row for row in pipeline.public_data(conn,self.config,self.sources)['items'] if row['id']==item['id'])
+            self.assertEqual(current['event'],item['event'])
+            self.assertEqual(current['summary_zh'],item['summary_zh'])
+            conn.execute('UPDATE items SET content_hash=? WHERE id=?',('b'*64,item['id']))
+            cloud.retain_translations(conn,self.snapshot,self.config,self.sources)
+            current=next(row for row in pipeline.public_data(conn,self.config,self.sources)['items'] if row['id']==item['id'])
+            self.assertIsNone(current['event'])
+            self.assertEqual(current['summary_zh'],'')
+        finally:conn.close()
     def test_offline_validation_makes_no_network_or_model_calls(self):
         with patch.object(pipeline,'collect',side_effect=AssertionError('must not collect')),patch.object(cfp,'refresh',side_effect=AssertionError('must not fetch')):
             report=cloud.run(offline=True)

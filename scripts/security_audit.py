@@ -34,12 +34,18 @@ def audit():
     dist=ROOT/'dist'
     if not (dist/'index.html').exists():issues.append('尚未构建网站')
     for path in dist.rglob('*'):
+        if path.is_symlink():
+            issues.append('发布目录存在符号链接')
+            continue
         if not path.is_file():continue
         relative=str(path.relative_to(dist)).replace('\\','/')
         if any(part in ('runtime','.git','.env') for part in path.relative_to(dist).parts) or path.suffix in ('.sqlite3','.db','.pem','.key'):
             issues.append('发布目录存在私有文件：'+relative)
         if path.suffix=='.html':
-            parser=AssetParser();parser.feed(path.read_text(encoding='utf-8'));issues.extend(relative+': '+message for message in parser.errors)
+            markup=path.read_text(encoding='utf-8')
+            parser=AssetParser();parser.feed(markup);issues.extend(relative+': '+message for message in parser.errors)
+            if 'http-equiv="Content-Security-Policy"' not in markup:
+                issues.append(relative+' 缺少页面安全策略')
     headers=(dist/'_headers').read_text(encoding='utf-8') if (dist/'_headers').exists() else ''
     for directive in ("default-src 'self'","script-src 'self'","object-src 'none'","camera=()","microphone=()"):
         if directive not in headers:issues.append('缺少响应安全策略：'+directive)

@@ -10,7 +10,7 @@ import re
 import subprocess
 import tarfile
 import zipfile
-from core import ROOT, database, identity, now, read_json, run_lock, safe_url, upsert_item, write_json
+from core import ROOT, database, identity, now, plain, read_json, run_lock, safe_url, upsert_item, write_json
 import pipeline
 
 
@@ -29,15 +29,24 @@ def restore_snapshot(conn, snapshot, config, sources):
         entry['evidence']=''
         upsert_item(conn,entry,source,config)
         conn.execute('UPDATE items SET discovered_at=?,updated_at=? WHERE id=?',(item['discovered_at'],item['updated_at'],item['id']))
+        revision=item.get('source_revision')
+        if isinstance(revision,str) and re.fullmatch(r'[0-9a-f]{64}',revision):
+            conn.execute('UPDATE items SET content_hash=? WHERE id=?',(revision,item['id']))
+        for provenance in item.get('provenance',[]):
+            if provenance.get('source_id') in by_source and safe_url(provenance.get('url','')) and provenance.get('seen_at'):
+                conn.execute('INSERT OR REPLACE INTO provenance VALUES(?,?,?,?)',
+                             (item['id'],provenance['source_id'],provenance['url'],provenance['seen_at']))
     for source in snapshot.get('sources',[]):
         if source.get('id') not in by_source:continue
-        conn.execute('INSERT OR REPLACE INTO source_state(id,attempted_at,success_at,status,error,item_count,next_attempt_at) VALUES(?,?,?,?,?,?,?)',
-                     (source['id'],source.get('attempted_at'),source.get('success_at'),source.get('status','unverified'),source.get('error'),source.get('item_count',0),source.get('next_attempt_at')))
+        failures=source.get('consecutive_failures',0)
+        failures=max(0,min(failures,999)) if isinstance(failures,int) else 0
+        conn.execute('INSERT OR REPLACE INTO source_state(id,attempted_at,success_at,status,error,item_count,next_attempt_at,failures) VALUES(?,?,?,?,?,?,?,?)',
+                     (source['id'],source.get('attempted_at'),source.get('success_at'),source.get('status','unverified'),source.get('error'),source.get('item_count',0),source.get('next_attempt_at'),failures))
     conn.commit()
 
 
 def retain_translations(conn,snapshot,config,sources):
-    """Keep published title translations only when original title is unchanged; no new summaries."""
+    """Carry already validated publication fields forward through unchanged source revisions."""
     by_source={s['id']:s for s in sources}
     for old in snapshot.get('items',[]):
         if not old.get('title_zh'):continue
@@ -48,14 +57,23 @@ def retain_translations(conn,snapshot,config,sources):
               'authority':source['authority'],'source_excerpt':row['evidence'],'evidence_basis':row['evidence_basis']}
         result={'id':row['id'],'content_hash':row['content_hash'],'title_zh':old['title_zh'],'summary_zh':'',
                 'module':row['module'],'topics':json.loads(row['topics']),'evidence_quotes':[],'event':None,'deadline':None}
-        # Dates require original evidence in this run. A public snapshot alone is not new evidence.
+        same_revision=bool(old.get('source_revision') and old['source_revision']==row['content_hash'])
+        if same_revision:
+            dates=[old[key].get('date_text','') for key in ('event','deadline') if isinstance(old.get(key),dict)]
+            item['source_excerpt']+='\n'+'\n'.join(value for value in dates if isinstance(value,str) and len(value)<=100)
         for key in ('event','deadline'):
             if old.get(key):
                 trial={**result,key:old[key]}
                 try:pipeline.validate_enrichment(trial,item,config)
                 except ValueError:continue
                 result=trial
-        valid=pipeline.validate_enrichment(result,item,config)
+        # Titles and individual date fields were validated above. The summary is
+        # original published content and is copied only for the identical revision.
+        result=pipeline.validate_enrichment(result,item,config)
+        summary=old.get('summary_zh','')
+        if same_revision and isinstance(summary,str) and 0<len(summary)<=600 and plain(summary)==summary:
+            result['summary_zh']=summary
+        valid=result
         ai=old.get('ai') or {}
         conn.execute('INSERT OR REPLACE INTO enrichments VALUES(?,?,?,?,?)',
                      (row['id'],row['content_hash'],json.dumps(valid,ensure_ascii=False),ai.get('model','既有公开标题译名'),ai.get('processed_at',old['updated_at'])))
@@ -105,19 +123,25 @@ def run(offline=False):
                 stats=pipeline.collect(conn,config,sources)
                 refresh(config,limit=40)
             retain_translations(conn,snapshot,config,sources)
+            previous=snapshot.get('operations',{})
+            last=previous.get('last_effective_run') or previous.get('last_run')
+            if not last or not (last.get('successes') or last.get('failures')):last=None
             write_json(ROOT/'runtime/cloud/operation.json',{'runner':'offline-validation' if offline else 'github-actions',
-                       'event':'offline' if offline else os.environ.get('GITHUB_EVENT_NAME','unknown'),'last_cloud_run':now() if not offline else None})
+                       'event':'offline' if offline else os.environ.get('GITHUB_EVENT_NAME','unknown'),'last_cloud_run':now() if not offline else None,
+                       'scheduled_run_verified':previous.get('scheduled_run_verified',False),'previous_effective_run':last})
             data=pipeline.build(conn,config,sources)
             from security_audit import audit
             if audit()['issues']:raise ValueError('发布目录安全检查失败')
             # This is the only upload artifact: public static files, never SQLite/cache/agent tasks.
-            artifact=ROOT/'runtime/cloud/artifact.tar';artifact.parent.mkdir(parents=True,exist_ok=True)
-            with tarfile.open(artifact,'w') as archive:
-                for path in sorted((ROOT/'dist').rglob('*')):
-                    if path.is_symlink():raise ValueError('发布产物不接受符号链接')
-                    if path.is_file():archive.add(path,arcname=path.relative_to(ROOT/'dist').as_posix(),recursive=False)
+            artifact=ROOT/'runtime/cloud/artifact.tar'
+            if offline:
+                artifact.parent.mkdir(parents=True,exist_ok=True)
+                with tarfile.open(artifact,'w') as archive:
+                    for path in sorted((ROOT/'dist').rglob('*')):
+                        if path.is_symlink():raise ValueError('发布产物不接受符号链接')
+                        if path.is_file():archive.add(path,arcname=path.relative_to(ROOT/'dist').as_posix(),recursive=False)
             report={'runner':'offline' if offline else 'github-actions','items':len(data['items']),'collection':stats,'model_calls':0,
-                    'deployment_confirmed':False,'artifact':'runtime/cloud/artifact.tar'}
+                    'deployment_confirmed':False,'artifact':'runtime/cloud/artifact.tar' if offline else 'dist/'}
             write_json(ROOT/'runtime/cloud/result.json',report);print(json.dumps(report,ensure_ascii=True));return report
         finally:conn.close()
 
