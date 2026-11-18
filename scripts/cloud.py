@@ -149,7 +149,7 @@ def run(offline=False):
 def export_source():
     """New ZIP without git history, local state, credentials or original hosting identity."""
     folders=('scripts','config','web','tests','docs','dist','.github')
-    singles=('README.md','LICENSE','package.json','WORKBUDDY_START_HERE.md','.gitignore')
+    singles=('README.md','package.json','.gitignore')
     output=ROOT/'artifacts/LexAtlas-云端部署源码.zip';output.parent.mkdir(exist_ok=True)
     names=[]
     with zipfile.ZipFile(output,'w',zipfile.ZIP_DEFLATED) as archive:
@@ -158,7 +158,7 @@ def export_source():
                 if not path.is_file() or path.is_symlink() or '__pycache__' in path.parts or path.suffix=='.pyc':continue
                 name=path.relative_to(ROOT).as_posix()
                 if '/.openai/' in name or path.name.startswith('.env'):continue
-                if folder=='docs' and path.suffix not in ('.md','.txt'):continue
+                if folder=='docs' and name!='docs/LEXPACIS_MANUAL.md':continue
                 archive.write(path,name);names.append(name)
         for name in singles:
             if (ROOT/name).exists():archive.write(ROOT/name,name);names.append(name)
