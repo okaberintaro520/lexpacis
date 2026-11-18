@@ -68,6 +68,43 @@ class FeatureWorkflowTests(unittest.TestCase):
         rendering.write_release(data)
         self.assertNotIn('cfp-ljil-law-society-2027',(self.root/'dist/cfp.ics').read_text(encoding='utf-8'))
         self.assertNotIn('cfp-ljil-law-society-2027',(self.root/'dist/api/cfp.json').read_text(encoding='utf-8'))
+    def test_editorial_policy_covers_all_public_exports(self):
+        sources=core.read_json(self.root/'config/sources.json')
+        by_id={source['id']:source for source in sources}
+        entries=[
+            ('keep','Award interpretation under investment treaties','','crossref-ejil'),
+            ('title','A comparative study of Chinese arbitration','','crossref-ejil'),
+            ('evidence','A public law case study','The original discusses Taiwan.','crossref-ejil'),
+            ('translation','Approaches to arbitration disclosure','','crossref-ejil'),
+            ('provenance','Treaty access in archives','','crossref-ejil'),
+            ('news','New research library opens','','un-geneva-news'),
+            ('wto','A neutral institutional alert','','wto')
+        ]
+        for slug,title,evidence,source_id in entries:
+            url='https://example.org/'+slug
+            core.upsert_item(self.conn,{'title':title,'url':url,'evidence':evidence},by_id[source_id],self.config)
+        restricted_ids={core.identity('https://example.org/'+entry[0]) for entry in entries[1:]}
+        translated_id=core.identity('https://example.org/translation')
+        translated=self.conn.execute('SELECT * FROM items WHERE id=?',(translated_id,)).fetchone()
+        enrichment={'title_zh':'中国仲裁披露规则','summary_zh':'','module':'research','topics':[],'event':None,'deadline':None}
+        self.conn.execute('INSERT INTO enrichments VALUES(?,?,?,?,?)',
+                          (translated_id,translated['content_hash'],json.dumps(enrichment),'fixture',core.now()))
+        self.conn.execute('INSERT INTO provenance VALUES(?,?,?,?)',
+                          (core.identity('https://example.org/provenance'),'crossref-ajil','https://example.org/related/%43hina',core.now()))
+        self.call['title']='中国比较法专题征稿'
+        self.apply(self.call)
+        data=pipeline.public_data(self.conn,self.config,sources)
+        self.assertEqual([item['id'] for item in data['items']],[core.identity('https://example.org/keep')])
+        self.assertNotIn(self.call['id'],[call['id'] for call in data['cfp']['calls']])
+        self.assertEqual({s['id'] for s in data['sources'] if s['status']=='paused'},
+                         {'wto','un-geneva-news','un-geneva-press','un-geneva-meetings'})
+        rendering.write_release(data)
+        for relative in ('data.js','api/items.json','feed.xml','feeds/modules/news.xml','sitemap.xml','calendar.ics','cfp.ics','api/cfp.json'):
+            payload=(self.root/'dist'/relative).read_text(encoding='utf-8')
+            for item_id in restricted_ids|{self.call['id']}:
+                self.assertNotIn(item_id,payload)
+        for item_id in restricted_ids:
+            self.assertFalse((self.root/'dist/items'/f'{item_id}.html').exists())
     def test_output_path_restricted(self):
         path=self.root/'external-output.json';core.write_json(path,{'model':'fixture-only','calls':[self.call]})
         with self.assertRaises(ValueError):cfp.apply_updates(path)

@@ -10,6 +10,7 @@ import urllib.parse
 import urllib.request
 from core import ROOT, UTC, LinkParser, identity, log, now, parse_date, plain, read_json, safe_url, write_json
 from network_policy import validate_public_url, RestrictedRedirect
+from publication_policy import restricted_content
 
 KINDS={'journal_special','journal_notice','conference'}
 
@@ -111,7 +112,7 @@ def public_data(conn,main_items):
         if 'journal:'+journal['id'] in rules.get('hidden_items',[]):continue
         page=state['pages'].get('journal:'+journal['id'],{})
         journal_output.append({**journal,'check_status':page.get('status','unverified'),'checked_at':page.get('checked_at'),
-                               'success_at':page.get('success_at'),'error':page.get('error'),'changed':page.get('changed',False)})
+                               'success_at':page.get('success_at'),'error':'投稿入口暂未成功读取。' if page.get('error') else None,'changed':page.get('changed',False)})
     calls=[]
     updates=read_json(ROOT/'runtime/cfp/accepted-calls.json',[])
     by_id={s['id']:s for s in seeds}
@@ -122,6 +123,10 @@ def public_data(conn,main_items):
         if seed['id'] in hidden or seed.get('visibility')=='hidden':continue
         if seed.get('journal_id') and 'journal:'+seed['journal_id'] in hidden:continue
         page=state['pages'].get('call:'+seed['id'],{})
+        evidence=[seed, page.get('evidence_excerpt','')]
+        if seed.get('page_id'):
+            evidence.append(state['pages'].get(seed['page_id'],{}).get('evidence_excerpt',''))
+        if restricted_content(evidence,rules):continue
         calls.append({**{k:v for k,v in seed.items() if k not in ('evidence_quote','content_hash','page_id')},
                       'monitor_status':page.get('status','not_checked_by_fetcher'),'last_monitor_at':page.get('checked_at'),
                       'source_changed':page.get('changed',False)})

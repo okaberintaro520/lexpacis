@@ -13,6 +13,7 @@ import urllib.error
 import uuid
 import webbrowser
 from core import ROOT, UTC, atomic_write, database, fingerprint, http_fetch, log, now, parse_crossref, parse_date, parse_feed, parse_listing, plain, read_json, run_lock, safe_url, upsert_item, write_json
+from publication_policy import restricted_content, source_paused
 
 def configuration():
     return read_json(ROOT/'config/site.json'),read_json(ROOT/'config/sources.json')
@@ -20,13 +21,17 @@ def configuration():
 def visible(row, sources, rules):
     source=next((s for s in sources if s['id']==row['source_id']),None)
     return bool(source and source.get('reuse')=='metadata_only' and row['visibility']=='public'
+                and not source_paused(source,rules)
                 and row['id'] not in rules.get('hidden_items',[])
-                and row['source_id'] not in rules.get('hidden_sources',[]))
+                and row['module'] not in rules.get('paused_modules',[])
+                and not restricted_content([row['title'],row['url'],row['doi'],row['evidence'],
+                                            json.loads(row['bibliography'])],rules))
 
 def collect(conn,config,sources,force=False):
     started=now(); stats={'successes':0,'failures':0,'added':0,'changed':0,'skipped':0}
+    rules=read_json(ROOT/'config/visibility.json',{})
     for source in sources:
-        if not source.get('enabled'): continue
+        if not source.get('enabled') or source_paused(source,rules): continue
         state=conn.execute('SELECT * FROM source_state WHERE id=?',(source['id'],)).fetchone()
         if state and not force:
             if state['next_attempt_at'] and state['next_attempt_at']>now():
@@ -221,6 +226,7 @@ def apply(conn,config,sources,path):
 
 def public_data(conn,config,sources):
     rules=read_json(ROOT/'config/visibility.json',{})
+    paused_sources={s['id'] for s in sources if source_paused(s,rules)}
     items=[]
     rows=conn.execute('SELECT * FROM items ORDER BY COALESCE(published_at,discovered_at) DESC').fetchall()
     for row in rows:
@@ -230,24 +236,32 @@ def public_data(conn,config,sources):
         item.update(topics=json.loads(row['topics']),authors=json.loads(row['authors']),bibliography=json.loads(row['bibliography']))
         item['material_type']={'wto':'官方新闻','icj':'官方新闻稿索引','pca':'机构公告索引','esil':'学会公告'}.get(row['source_id'],
                               '书目元数据' if row['source_id'].startswith('crossref-') else '官方机构新闻报道' if next((s.get('authority') for s in sources if s['id']==row['source_id']),None)=='official_news_service' else '学术平台文章')
-        item['provenance']=[dict(p) for p in conn.execute('SELECT source_id,url,seen_at FROM provenance WHERE item_id=?',(row['id'],))
-                            if p['source_id'] not in rules.get('hidden_sources',[])]
+        provenance=[dict(p) for p in conn.execute('SELECT source_id,url,seen_at FROM provenance WHERE item_id=?',(row['id'],))]
+        if restricted_content(provenance,rules): continue
+        item['provenance']=[p for p in provenance if p['source_id'] not in paused_sources]
         enrichment=conn.execute('SELECT * FROM enrichments WHERE item_id=? AND content_hash=?',(row['id'],row['content_hash'])).fetchone()
         item.update(title_zh='',summary_zh='',ai=None,event=None,deadline=None)
         if enrichment:
             enriched=json.loads(enrichment['payload'])
+            if restricted_content(enriched,rules): continue
             item.update({key:enriched.get(key) for key in ('title_zh','summary_zh','module','topics','event','deadline')})
             item['ai']={'model':enrichment['model'],'processed_at':enrichment['created_at'],'basis':row['evidence_basis']}
-        items.append(item)
+        if item['module'] not in rules.get('paused_modules',[]) and not restricted_content(item,rules):
+            items.append(item)
     source_info=[]
     for source in sources:
+        if source['id'] in rules.get('hidden_sources',[]): continue
+        paused=source['id'] in paused_sources
         state=conn.execute('SELECT * FROM source_state WHERE id=?',(source['id'],)).fetchone()
         info={key:source.get(key) for key in ('id','name','organization','homepage','kind','module','authority','enabled','poll_hours','scope','language')}
-        if source['kind']=='rss':info['feed_url']=source['url']
-        info.update(status=state['status'] if state else ('unverified' if source['enabled'] else 'candidate'),
+        if paused:
+            info['enabled']=False
+            state=None
+        if source['kind']=='rss' and not paused:info['feed_url']=source['url']
+        info.update(status='paused' if paused else state['status'] if state else ('unverified' if source['enabled'] else 'candidate'),
                     attempted_at=state['attempted_at'] if state else None,
                     success_at=state['success_at'] if state else None,
-                    error=state['error'] if state else None,
+                    error='信源暂未成功读取或解析。' if state and state['error'] else None,
                     consecutive_failures=state['failures'] if state else 0,
                     item_count=sum(1 for x in items if x['source_id']==source['id']),
                     next_attempt_at=state['next_attempt_at'] if state else None)
@@ -259,6 +273,7 @@ def public_data(conn,config,sources):
     return {'schema_version':2,'generated_at':now(),'site':{k:config[k] for k in ('name','english_name','tagline','description','base_url','timezone')},
             'topics':[{k:t[k] for k in ('id','name','short')} for t in config['topics']],
             'modules':config['modules'],'items':items[:config['max_public_items']],
+            'paused_modules':rules.get('paused_modules',[]),
             'sources':source_info,'cfp':cfp_public_data(conn,items),'operations':{'last_run':dict(last_run) if last_run else None,
             'scheduler_enabled':bool(cloud_run),
             'scheduled_run_verified':bool(cloud_run and (cloud.get('event')=='schedule' or cloud.get('scheduled_run_verified'))),
@@ -275,9 +290,10 @@ def build(conn,config,sources):
 
 def reprocess(conn,config,sources):
     processed=0
+    rules=read_json(ROOT/'config/visibility.json',{})
     for source in sources:
         cache=ROOT/'runtime'/'cache'/source['id']/'latest.response'
-        if not source.get('enabled') or not cache.exists(): continue
+        if not source.get('enabled') or source_paused(source,rules) or not cache.exists(): continue
         raw=cache.read_bytes()
         adapter={'rss':parse_feed,'crossref':parse_crossref,'html':parse_listing}[source['kind']]
         for entry in adapter(raw,source)[:config['max_entries_per_source']]:

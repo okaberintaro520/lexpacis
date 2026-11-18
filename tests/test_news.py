@@ -38,16 +38,24 @@ class NewsTests(unittest.TestCase):
     def test_import_is_idempotent_and_not_fetch_success(self):
         with tempfile.TemporaryDirectory(dir=ROOT/'runtime/test-temp') as temporary:
             root=Path(temporary);(root/'config').mkdir()
-            core.write_json(root/'config/news-initial.json',core.read_json(ROOT/'config/news-initial.json'))
-            with patch.object(core,'ROOT',root),patch.object(news,'ROOT',root):
+            core.write_json(root/'config/news-initial.json',{
+                'checked_method':'official_listing_read',
+                'listing_url':'https://www.ungeneva.org/en/news-media/news',
+                'checked_at':'2026-11-18',
+                'items':[{'source_id':self.source['id'],'title':'Test listing headline',
+                          'title_zh':'测试目录标题','published_at':'2026-11-17',
+                          'url':'https://www.ungeneva.org'+self.url}]
+            })
+            with patch.object(core,'ROOT',root),patch.object(news,'ROOT',root),patch.object(pipeline,'ROOT',root):
                 conn=core.database(root)
                 try:
                     first=news.import_initial(conn,self.config,self.sources)
                     second=news.import_initial(conn,self.config,self.sources)
-                    self.assertEqual(first['added'],6);self.assertEqual(second['added'],0)
+                    self.assertEqual(first['added'],1);self.assertEqual(second['added'],0)
                     self.assertEqual(second['translated_titles'],0)
                     self.assertEqual(conn.execute('SELECT COUNT(*) FROM source_state').fetchone()[0],0)
                     public=pipeline.public_data(conn,self.config,self.sources)
+                    self.assertEqual(len(public['items']),1)
                     self.assertTrue(all(i['module']=='news' and i['material_type']=='官方机构新闻报道' and not i['summary_zh'] for i in public['items']))
                 finally:conn.close()
     def test_news_cannot_be_promoted_to_case_material(self):

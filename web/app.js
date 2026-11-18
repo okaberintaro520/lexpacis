@@ -52,7 +52,7 @@
     if (source.status === 'ok' && source.success_at && (Date.now() - Date.parse(source.success_at)) > Math.max(source.poll_hours * 3, 48) * 3600000) return 'stale';
     return source.status;
   };
-  const statusName = status => ({ok:'最近采集成功',error:'访问异常',candidate:'候选入口',unverified:'尚未验证',stale:'等待刷新'}[status] || '未验证');
+  const statusName = status => ({ok:'最近采集成功',error:'访问异常',candidate:'候选入口',unverified:'尚未验证',stale:'等待刷新',paused:'暂停采集'}[status] || '未验证');
   const empty = (heading, text, button = '') => `<div class="empty-state"><div class="empty-symbol">⌁</div><h3>${e(heading)}</h3><p>${e(text)}</p>${button}</div>`;
   const saveButton = item => `<button class="save-button ${saved.has(item.id) ? 'saved' : ''}" data-save="${e(item.id)}" aria-label="${saved.has(item.id) ? '取消收藏' : '收藏条目'}：${e(title(item))}" aria-pressed="${saved.has(item.id)}">${icon}</button>`;
   const dateChips = item => ['event','deadline'].map(key => item[key] ? `<span class="event-date-chip">${key === 'event' ? '活动' : '截止'} ${e(shortDate(item[key].date))}</span>` : '').join('');
@@ -245,6 +245,13 @@
       pageTitle=moduleNames[route] || (route==='saved'?'我的研究清单':route==='topic'?(topicNames[params.get('id')] || '研究专题'):'国际法，持续观察。');
       const extra=route==='events'?`<div class="view-switch"><button data-view="list" class="${params.get('view')!=='calendar'?'active':''}">公告列表</button><button data-view="calendar" class="${params.get('view')==='calendar'?'active':''}">学术日历</button></div>`:'';
       html=heading(pageTitle,english[route] || 'RESEARCH DOSSIER',descriptions[route] || '同一专题下，连接文献、案例、官方资料与学术讨论。',extra);
+      if(data.paused_modules?.includes(route)){
+        html=heading(pageTitle,english[route],'本站目前收录国际法学术资料。');
+        html+=empty('此栏目暂停发布','你仍可浏览学术文献、征稿与司法资料。','<a class="secondary-button" href="#/research">浏览学术文献 ↗</a>');
+        page.innerHTML=html;
+        document.title=`${pageTitle} — ${data.site.name} ${data.site.english_name}`;
+        return;
+      }
       if(route==='latest'&&!['q','source','range','module','topic'].some(k=>params.get(k)))html+=latestIntro();
       if(route==='news')html+=newsStatus();
       if(route==='topic')html+=`<div class="topic-hero"><span>TOPIC DOSSIER · ${result.length} 条相关资料</span><a href="feeds/${e(data.topics.some(t=>t.id===params.get('id'))?params.get('id'):'disputes')}.xml">订阅本专题 RSS ↗</a></div>`;

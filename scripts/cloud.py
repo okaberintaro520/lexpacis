@@ -159,6 +159,7 @@ def export_source():
                 name=path.relative_to(ROOT).as_posix()
                 if '/.openai/' in name or path.name.startswith('.env'):continue
                 if folder=='docs' and name!='docs/LEXPACIS_MANUAL.md':continue
+                if name=='config/news-initial.json':continue
                 archive.write(path,name);names.append(name)
         for name in singles:
             if (ROOT/name).exists():archive.write(ROOT/name,name);names.append(name)
